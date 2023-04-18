@@ -1,0 +1,280 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.bhav.BinaryTree.Main",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.bhav.Trees.Main",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "QueueMain",
+            "request": "launch",
+            "mainClass": "com.bhav.Queue.QueueMain",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "StackMain",
+            "request": "launch",
+            "mainClass": "com.bhav.Stacks.StackMain",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "InBuiltExamples",
+            "request": "launch",
+            "mainClass": "com.bhav.Queue.InBuiltExamples",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "InBuiltExamples",
+            "request": "launch",
+            "mainClass": "com.bhav.Stacks.InBuiltExamples",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.bhav.LinkedList.Main",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Basic",
+            "request": "launch",
+            "mainClass": "com.bhav.Oops7.collections.enumExamples.Basic",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "VectorExample",
+            "request": "launch",
+            "mainClass": "com.bhav.Oops7.collections.VectorExample",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.bhav.Oops7.collections.Main",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.bhav.Oops6.cloning.Main",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Demo",
+            "request": "launch",
+            "mainClass": "com.bhav.Oops6.exceptionHandling.Demo",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.bhav.Oops6.exceptionHandling.Main",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "LambdaFunction",
+            "request": "launch",
+            "mainClass": "com.bhav.Oops6.generics.comparing.LambdaFunction",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.bhav.Oops6.generics.comparing.Main",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "CustomGenArrayList",
+            "request": "launch",
+            "mainClass": "com.bhav.Oops6.generics.CustomGenArrayList",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "CustomArrayList",
+            "request": "launch",
+            "mainClass": "com.bhav.Oops6.generics.CustomArrayList",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "com.bhav.Oops5.Main",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch ObjectDemo",
+            "request": "launch",
+            "mainClass": "com.bhav.Oops4.ObjectDemo",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch Oops3_Polymorphism",
+            "request": "launch",
+            "mainClass": "com.bhav.Oops3_Polymorphism.Oops3_Polymorphism",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch Oops3_Inheritance",
+            "request": "launch",
+            "mainClass": "Oops3_Inheritance",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch oops2",
+            "request": "launch",
+            "mainClass": "oops2",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch oops1",
+            "request": "launch",
+            "mainClass": "oops1",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch TwoD_arrays",
+            "request": "launch",
+            "mainClass": "TwoD_arrays",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch arrays",
+            "request": "launch",
+            "mainClass": "arrays",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch binarySearch",
+            "request": "launch",
+            "mainClass": "binarySearch",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch bubbleSort",
+            "request": "launch",
+            "mainClass": "bubbleSort",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch conditionals",
+            "request": "launch",
+            "mainClass": "conditionals",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch first",
+            "request": "launch",
+            "mainClass": "first",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch functions",
+            "request": "launch",
+            "mainClass": "functions",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch linearSearch",
+            "request": "launch",
+            "mainClass": "linearSearch",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch loops",
+            "request": "launch",
+            "mainClass": "loops",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch mathsForDSA",
+            "request": "launch",
+            "mainClass": "mathsForDSA",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch practise",
+            "request": "launch",
+            "mainClass": "practise",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch recursion",
+            "request": "launch",
+            "mainClass": "recursion",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch reverseAnArray",
+            "request": "launch",
+            "mainClass": "reverseAnArray",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Launch stringsInJava",
+            "request": "launch",
+            "mainClass": "stringsInJava",
+            "projectName": "JAVA_169d93c0"
+        }
+    ]
+}
