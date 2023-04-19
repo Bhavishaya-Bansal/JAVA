@@ -86,6 +86,7 @@ public class Main {
         ans= ans+ countNodes(root.right); // call our recursion fot the right node
         return ans;
     }
+    
 
     // To get the height of the Binary tree
     public static int height(BinaryTreeNode<Integer> root) {
@@ -107,6 +108,34 @@ public class Main {
         int option2= diameter(root.left);
         int option3= diameter(root.right);
         return Math.max(option1, Math.max(option2, option3));
+    }
+
+    // We have created a function to return pur Height and Diameter at once only (in a form of pair) inspite of asking height and then diameter and making things lengthy for us
+    public static Pair<Integer, Integer> heightDiameter(BinaryTreeNode<Integer> root){
+        // in our Pair class we have created 'first' & 'second' where first is height of the tree and secondis the diameter of the tree
+        if(root == null){ // Base case
+            Pair<Integer, Integer> output = new Pair<>();
+            output.first = 0;
+            output.second= 0;
+            return output;
+        }
+        Pair<Integer, Integer> leftOutput= heightDiameter(root.left); // this will provide of height & diameter of left subtree at once
+        Pair<Integer, Integer> rightOutput= heightDiameter(root.right); // this will provide us height & diameter of right subtree at once
+        int height = 1+ Math.max(leftOutput.first, rightOutput.first); // our height of the tree would be declared from maximum of left tree's height & right tree's height
+
+        int diaOption1= leftOutput.first + rightOutput.first; // Diameter's first option is left subtree's height + right subtree's height (as seen above) 
+
+        int diaOption2= leftOutput.second; // Second option for our tree's diameter to be is diameter of left subtree's output
+
+        int diaOption3= rightOutput.second; // Third option for our tree's diameter to be is diameter of right subtree's output
+        
+        int diameter= Math.max(diaOption1, Math.max(diaOption2, diaOption3));
+
+        // as we have done the calculations now we will create our pair and finally put our height and diameter in the output and return it 
+        Pair<Integer, Integer> output = new Pair<>();
+        output.first = height;
+        output.second= diameter;
+        return output;
     }
 
     public static void main(String[] args) {
@@ -134,5 +163,8 @@ public class Main {
         System.out.println();
         System.out.println("Height of the tree: "+ height(root));
         System.out.println("Diameter of our tree is: "+ diameter(root) );
+
+        System.out.println("Our height and diameter for the tree are: "+ heightDiameter(root).first +"&"+ heightDiameter(root).second);
+
     }
 }
