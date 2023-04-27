@@ -9,7 +9,7 @@ public class ObjectDemo {
     }
 
     public int hashCode(){
-        return super.hashCode(); //It gies us a number representation of the object via a number
+        return super.hashCode(); //It gives us a number representation of the object via a number
     }
     
     public static void main(String[] args) {

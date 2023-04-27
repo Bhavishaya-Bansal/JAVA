@@ -77,7 +77,7 @@ class A{
     final int num=99;
     String name;
 
-    public A(String name){
+    public A(String name){ // --> constructor
         // System.out.println();
         this.name = name;
     }

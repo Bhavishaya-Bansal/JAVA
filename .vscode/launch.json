@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Oops4",
+            "request": "launch",
+            "mainClass": "com.bhav.Oops4.Oops4",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "com.bhav.BinaryTree.Main",
