@@ -2,7 +2,7 @@ package com.bhav.Hash;
 
 import java.util.*;
 
-public class Hashing {
+public class Hashset {
     public static void main(String[] args) {
         // Creating a hashset:
         HashSet<Integer> set = new HashSet<>();
