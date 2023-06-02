@@ -35,6 +35,7 @@ public class Hashmap {
         System.out.println(map.get("Dubai")); // key does not exists
 
         // Iteration in hashmap
-        
+        // iteration can be using iterative methods 
+
     }
 }
