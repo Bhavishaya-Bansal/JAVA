@@ -137,7 +137,7 @@ public class HashMapImplementation {
         }
 
         public boolean isEmpty(){
-            return n == 0; // if no node is there it means our hashmap is empty here
+            return n == 0; // if no node is there it means our hashmap is empty
         }
     }
 
