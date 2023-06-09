@@ -1,7 +1,7 @@
 package com.bhav.Hash;
 
 import java.util.*;
-
+// This code is the how a hashMap is implemented 
 public class HashMapImplementation {
     static class HashMap<K, V> { // this is our hashMop data structure 
         private class Node{ // defines node of linked list
@@ -107,6 +107,7 @@ public class HashMapImplementation {
             }
             else{ 
                 Node node= buckets[bucketIndex].remove(dataIndex); // removed our dataIndex
+                n--; // decrease the size
                 return node.value; 
             }
         }
@@ -120,12 +121,12 @@ public class HashMapImplementation {
             }
             else{ 
                 Node node= buckets[bucketIndex].get(dataIndex); 
-                return node.value= value; 
+                return node.value; 
             }
         }
 
         public ArrayList<K> keySet(){
-            ArrayList<K> keys= new ArrayList<>();
+            ArrayList<K> keys= new ArrayList<>(); 
             for(int i=0; i< buckets.length; i++){
                 LinkedList<Node> LL= buckets[i];
                 for(int j=0; j<LL.size(); j++){
@@ -146,6 +147,14 @@ public class HashMapImplementation {
         map.put("india", 122);
         map.put("us", 46354);
         map.put("china", 3423);
+
+        ArrayList<String> keys= map.keySet();
+        for(int i=0; i< keys.size(); i++){
+            System.out.println(keys.get(i)+ " "+ map.get(keys.get(i))); // 'keys.get(i)' will give us the value of all of the keys and 'map.get(keys.get(i))' will give us the values respective to the keys
+        }
+
+        map.remove("India");
+        System.out.println(map.get("India")); // after removing 'India' this would give us null as output
     }
     
 }

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "HashMapImplementation",
+            "request": "launch",
+            "mainClass": "com.bhav.Hash.HashMapImplementation",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "Hashmap",
             "request": "launch",
             "mainClass": "com.bhav.Hash.Hashmap",
