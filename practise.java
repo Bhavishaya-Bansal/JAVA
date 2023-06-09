@@ -1,24 +1,24 @@
 import java.util.*;
-public class practise {
-    public static void main(String[] args){
-        Set<Integer> hashset = new HashSet<Integer>();
-        for(int num : nums){
-            hashset.add(num);   
-        }
-        int longestStreak= 0;
-        for(int num: nums){
-            if(!hashset.contains(num-1)){
-                int currentNum = num;
-                int currentStreak = 1;
-                while(hashset.contains(currentNum+1)){
-                    currentNum +=1;
-                    currentStreak +=1;
 
-                }
-                longestStreak =Math.max(currentStreak, longestStreak);
-            }
+class practise{
+    public static void main(String args[]){
+        int a =5;
+        int b= 7;
+        
+        // to find a number is even or odd using bits
+        if((a&1) == 0){
+            System.out.println("even");
         }
-        return longestStreak;
+        else{
+            System.out.println("odd");
+        }
+
+        // swapping two numbers
+
+        a= a^b;
+        b= a^b;
+        a= a^b;
+
+        System.out.println(a + " " + b);
     }
-
-
+}

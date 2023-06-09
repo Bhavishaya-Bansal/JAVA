@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Hashmap {
     public static void main(String[] args){
-        // HashMap with key of string type and value of ineger type 
+        // HashMap with key of string type and value of integer type 
         HashMap<String, Integer> map = new HashMap<>();
     
         // Insertion in hashmap
@@ -35,7 +35,27 @@ public class Hashmap {
         System.out.println(map.get("Dubai")); // key does not exists
 
         // Iteration in hashmap
-        // iteration can be using iterative methods 
+        // iteration can be using enhanced for loop
+        // just like-->  for(int val : arr)
+        for(Map.Entry<String, Integer> e : map.entrySet()){
+            System.out.println(e.getKey());
+            System.out.println(e.getValue());
+        }
+
+        // Iteration method to only get our Keys
+        // here we have made a set of String type of name 'keys' and used func keySet which makes set only of our keys
+        Set<String> keys= map.keySet();
+        // for loop to print it
+        for(String key : keys){
+            System.out.println(key+ " "+ map.get(key));
+                            // prints key..   this prints value corresponding to key in our pair
+        }
+
+        // how to remove a pair in our map
+        // we use 'remove' keyword.. it removes both key and value from our map 
+
+        map.remove("China"); // China key and value gets removed 
+        System.out.println(map);
 
     }
 }
