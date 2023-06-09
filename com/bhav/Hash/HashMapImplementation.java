@@ -1,7 +1,7 @@
 package com.bhav.Hash;
 
 import java.util.*;
-// This code is the how a hashMap is implemented in java
+// This code is the how a hashMap is implemented
 public class HashMapImplementation {
     static class HashMap<K, V> { // this is our hashMop data structure 
         private class Node{ // defines node of linked list
