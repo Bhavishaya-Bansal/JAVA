@@ -19,6 +19,7 @@ public class SwitchCases {
                 break;
             
             case "Grapes":
+            // this runs gor grapes 
                 System.out.println("Small fruits");
                 break;
 
