@@ -9,6 +9,10 @@ public class SwitchCases {
             case "Mango":
                 System.out.println("The king of fruits");
                 break; // to exit the switch cases.. if mango runs
+            
+            case "Apple":
+                System.out.println("A juciy red fruit");
+                break;
 
         }
     }
