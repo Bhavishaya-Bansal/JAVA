@@ -3,7 +3,7 @@ package com.bhav.Hash;
 import java.util.*;
 // This code is the how a hashMap is implemented
 public class HashMapImplementation {
-    static class HashMap<K, V> { // this is our hashMap data structure 
+    static class HashMap<K, V> { // this is our hashMap data structure.. K and V are the generics here as we do not know exactly which data type will be used here
         private class Node{ // defines node of linked list
             K key;
             V value;
