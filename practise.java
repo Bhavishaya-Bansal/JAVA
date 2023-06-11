@@ -2,23 +2,18 @@ import java.util.*;
 
 class practise{
     public static void main(String args[]){
-        int a =5;
-        int b= 7;
-        
-        // to find a number is even or odd using bits
-        if((a&1) == 0){
-            System.out.println("even");
+        Scanner sc= new Scanner(System.in);
+        int n= sc.nextInt();
+        int f= 0;
+        int s= 1;
+        int count= 2;
+        while(count<= n){
+            int temp =s;
+            s = s+f;
+            f= temp;
+            count++;
         }
-        else{
-            System.out.println("odd");
-        }
+        System.out.println(s);
 
-        // swapping two numbers
-
-        a= a^b;
-        b= a^b;
-        a= a^b;
-
-        System.out.println(a + " " + b);
     }
 }
