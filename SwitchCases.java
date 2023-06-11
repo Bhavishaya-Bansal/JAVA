@@ -20,6 +20,10 @@ public class SwitchCases {
             
             case "Grapes":
                 System.out.println("Small fruits");
+                break;
+
+            default:
+                System.out.println("Please choose another fruit.");
 
         }
     }
