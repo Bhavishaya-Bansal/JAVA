@@ -14,6 +14,13 @@ public class SwitchCases {
                 System.out.println("A juciy red fruit");
                 break;
 
+            case "Orange":
+                System.out.println("Round fruit");
+                break;
+            
+            case "Grapes":
+                System.out.println("Small fruits");
+
         }
     }
 }
