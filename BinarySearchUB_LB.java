@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class BinarySearchUB_LB {
-    // This code is for Binary search
+    // This code is for Binary search which means that it will be used when the array is sorted
     // Lower Bound: This means that the function returns the index of the next smallest number just greater than or equal to that number. If there are multiple values that are equal to the number, lower_bound() returns the index of the first such value.
 
     /*  Example: 
