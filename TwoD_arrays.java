@@ -82,7 +82,9 @@ public class TwoD_arrays{
                 if(arr[i][j]== target){
                     return new int[]{i, j};
                 }
-                
+                else{
+                    return new int[]{-1,-1};
+                }
             }
         }
         return new int[]{-1,-1};
