@@ -70,4 +70,21 @@ public class TwoD_arrays{
         sc.close();
 
     }
+
+    // this is how we do linear search in a 2d array and RETURN AN ARRAY FROM A METHOD
+    
+        if(arr.length==0){
+            return new int[]{0,0};
+        }
+
+        for(int i=0; i<arr.length; i++){
+            for(int j=0; j<arr[0].length; j++){
+                if(arr[i][j]== target){
+                    return new int[]{i, j};
+                }
+                
+            }
+        }
+        return new int[]{-1,-1};
+    }
 }
