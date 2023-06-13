@@ -72,7 +72,7 @@ public class TwoD_arrays{
     }
 
     // this is how we do linear search in a 2d array and RETURN AN ARRAY FROM A METHOD
-    
+    static int[] searchInMatrix(int arr[][], int target){
         if(arr.length==0){
             return new int[]{0,0};
         }
