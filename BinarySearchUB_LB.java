@@ -95,6 +95,7 @@ public class BinarySearchUB_LB {
     }
 
     // code to find floor of the number.. kunal kushwaha style
+    // Floor of a number is the greatest element smaller to the target which is present in the array or the number equal to the target present in the array
     public static int floorOfNumber(int arr[], int target){
         int low =0; 
         int high= arr.length- 1;
