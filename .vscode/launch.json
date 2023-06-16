@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BinarySearchUB_LB",
+            "request": "launch",
+            "mainClass": "BinarySearchUB_LB",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "SwitchCases",
             "request": "launch",
             "mainClass": "SwitchCases",
