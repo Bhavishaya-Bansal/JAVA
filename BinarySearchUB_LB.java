@@ -69,6 +69,7 @@ public class BinarySearchUB_LB {
 
 
     // code to find ceiling of a number.. kunal kushwaha style
+    // Ceiling of a number is the number smallest element in the array which is greater than or equal to the target
     public static int ceilingOfNumber(int arr[], int target) {
         int low= 0;
         int high = arr.length-1;
