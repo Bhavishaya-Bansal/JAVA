@@ -93,6 +93,7 @@ public class BinarySearchUB_LB {
         return arr[low];
     }
 
+    // code to find floor of the number.. kunal kushwaha style
     public static int floorOfNumber(int arr[], int target){
         int low =0; 
         int high= arr.length- 1;
