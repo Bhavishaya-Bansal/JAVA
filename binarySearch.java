@@ -5,7 +5,7 @@
 //     int arr[]= {44, 43, 32, 21, 9, 0, -1, -4, -11};
 //     int target= 0;
 //     System.out.println(desSearch(arr, target));
-//    }
+//    } 
 
 //    // return the index and -1 if it does not exist     
 //    //function for ascending order sorted array
@@ -56,7 +56,7 @@
 //     }
 // }
 
-// order agnostics binary search
+// ORDER AGMOSTIC BINARY SEARCH
 
 public class binarySearch{
     public static void main(String args[]){
