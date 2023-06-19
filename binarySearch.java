@@ -56,7 +56,7 @@
 //     }
 // }
 
-// ORDER AGMOSTIC BINARY SEARCH
+// ORDER AGNOSTIC BINARY SEARCH
 
 public class binarySearch{
     public static void main(String args[]){
