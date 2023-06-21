@@ -1,4 +1,5 @@
 import java.util.*;
+// This is the code for CYCLIC SORT.. Cyclic sort algorithm is used to sort array which contains elements in the range 1 to n..
 
 public class CyclicSort {
     public static void main(String[] args) {
