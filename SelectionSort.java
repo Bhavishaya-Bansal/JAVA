@@ -1,4 +1,5 @@
 import java.util.Arrays;
+// code for SELECTION SORT
 
 public class SelectionSort {
     public static void main(String[] args) {
