@@ -20,11 +20,11 @@ public class bubbleSort {
                     int temp= arr[j];
                     arr[j]= arr[j-1];
                     arr[j-1]= temp;
-                    swapped = true;
+                    swapped = true; // made true here because swapping is made
                 }
             }
             // if we did not swap for particular value of i, it means the array is sorted hence stop the program
-            if(!swapped){ // it means !false i.e. = true
+            if(!swapped){ // it means !false i.e. = true.. it means if(swapped == false)
                 break;
             }
         }
