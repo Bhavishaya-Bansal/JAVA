@@ -14,6 +14,7 @@ public class Patterns {
         // pattern8(n);
         // pattern9(n);
         pattern10(n);
+        sc.close();
     }
 
     public static void pattern1(int n){
