@@ -19,6 +19,9 @@ public class BitManipulation {
 
         // int aans= once(arr);
         // System.out.println(aans);
+
+        int out= magic(n);
+        System.out.println(out);
     }
 
     public static void evenOdd(int n){
@@ -69,7 +72,8 @@ public class BitManipulation {
         
     // }
 
-    // MAGIC NUMBER -> the number is written in binary but is multiplied in power of 5.. 5^1, 5^2, 5^3 and so on...
+
+    // *** MAGIC NUMBER *** -> the number is written in binary but is multiplied in power of 5.. 5^1, 5^2, 5^3 and so on...
 
     // Magic number:      5^3  5^2  5^1
     //                1 -> 0    0    1  -> 5
@@ -83,6 +87,17 @@ public class BitManipulation {
         
     // }
 
+    public static int magic(int n){
+        int ans=0;
+        int base= 5; 
+        while(n>0){
+            int lastDigit= n & 1;
+            n = n>>1; 
+            ans= ans + (lastDigit * base);
+            base = base* 5;
+        }
+        return ans;
+    }
 
 
 }
