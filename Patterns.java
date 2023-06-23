@@ -3,15 +3,17 @@ import java.util.*;
 public class Patterns {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
-        int n = 5;
+        int n = 4;
         // pattern1(n);
         // pattern2(n);
         // pattern3(n);
         // pattern4(n);
         // pattern5(n);
-        pattern6(n);
-        pattern7(n);
-        pattern8(n);
+        // pattern6(n);
+        // pattern7(n);
+        // pattern8(n);
+        // pattern9(n);
+        pattern10(n);
     }
 
     public static void pattern1(int n){
@@ -139,7 +141,29 @@ public class Patterns {
                 }
                 System.out.println();
             }
+        }
+    }
 
+    public static void pattern9(int n){
+        n=2*n;
+        for(int i=0; i<= n; i++){
+            for(int j=0; j<= n; j++){
+                int values= Math.min(i, Math.min(j, Math.min(n-i, n-j)));
+                System.out.print(values);
+            }
+            System.out.println();
+        }
+    }
+
+    public static void pattern10(int n){
+        int originalN= n;
+        n= 2*n;
+        for(int i=0; i<=n; i++){
+            for(int j=0; j<= n; j++){
+                int values= originalN- Math.min(Math.min(i, j), Math.min(n-i, n-j));
+                System.out.print(values+ " ");
+            }
+            System.out.println();
         }
     }
 }
