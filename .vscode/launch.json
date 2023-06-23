@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Patterns",
+            "request": "launch",
+            "mainClass": "Patterns",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "CyclicSort",
             "request": "launch",
             "mainClass": "CyclicSort",
