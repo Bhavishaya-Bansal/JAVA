@@ -11,6 +11,7 @@ public class Patterns {
         // pattern5(n);
         pattern6(n);
         pattern7(n);
+        pattern8(n);
     }
 
     public static void pattern1(int n){
@@ -110,6 +111,35 @@ public class Patterns {
     }
 
     public static void pattern8(int n){
-        
+        for(int i= 1; i<= 2*n-1; i++){
+            if(i<= n){
+                for(int spaces= n-i; spaces>0; spaces--){
+                    System.out.print(" ");
+                }
+                for(int j=i; j>= 1; j--){
+                    System.out.print(j);
+                }
+                for(int after=2; after<= i; after++){
+                    System.out.print(after);
+                }
+                for(int space= 0; space< n-i; space++){
+                    System.out.print(" ");
+                }
+                System.out.println();
+            }
+            else{
+                for(int spaces=0; spaces<i-n; spaces++){
+                    System.out.print(" ");
+                }
+                for(int j= 2*n-i; j>0; j--){
+                    System.out.print(j);
+                }
+                for(int after=2; after<=2*n-i; after++){
+                    System.out.print(after);
+                }
+                System.out.println();
+            }
+
+        }
     }
 }
