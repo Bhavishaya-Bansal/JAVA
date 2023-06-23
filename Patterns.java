@@ -4,13 +4,13 @@ public class Patterns {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
         int n = 5;
-
         // pattern1(n);
         // pattern2(n);
         // pattern3(n);
         // pattern4(n);
         // pattern5(n);
         pattern6(n);
+        pattern7(n);
     }
 
     public static void pattern1(int n){
@@ -91,6 +91,25 @@ public class Patterns {
     }
 
     public static void pattern7(int n){
+        for(int i=1; i<= n; i++){
+            int spaces = n-i;
+            for(spaces= n-i; spaces>0; spaces--){
+                System.out.print(" ");
+            }
+            for(int j=i; j>=1; j--){
+                System.out.print(j);
+            }
+            for(int after=2; after<= i; after++){
+                System.out.print(after);
+            }
+            for(int spaces2=0; spaces2< n-i; spaces2++){
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void pattern8(int n){
         
     }
 }
