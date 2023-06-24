@@ -4,6 +4,8 @@ public class BitManipulation {
         int base= 3;
         int power = 6;
         int arr[]= {1, 3, 1, 1, 5, 2, 5, 5, 3, 3};
+        int a= 3;
+        int b= 9;
 
         // evenOdd(n);
 
@@ -45,8 +47,11 @@ public class BitManipulation {
         // int noOfSetBits2= noOfSetBits2(n);
         // System.out.println(noOfSetBits2);
 
-        int xor= findXOR(n);
-        System.out.println(xor);
+        // int xor= findXOR(n);
+        // System.out.println(xor);
+
+        int ans= xorBetween(a, b);
+        System.out.println(ans);
     }
 
     public static void evenOdd(int n){
@@ -229,4 +234,12 @@ public class BitManipulation {
     }
 
     // XOR of all numbers between a and b
+    // a=3 , b=9, ans= 3^4^5^6^7^8^9..
+
+    public static int xorBetween(int a, int b){
+        int oneToB= findXOR(b); // XOR of 1 till B
+        int xorTillA= findXOR(a); // XOR of 1 till a-1
+        int ans= oneToB ^ xorTillA; // if we xor the total with the the number just before a then it removes it.. as the xor of number with itself 0
+        return ans;
+    }
 }
