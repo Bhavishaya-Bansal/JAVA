@@ -1,6 +1,8 @@
 public class BitManipulation {
     public static void main(String[] args) {
-        int n= 6;
+        int n= 3;
+        int base= 3;
+        int power = 6;
         int arr[]= {1, 3, 1, 1, 5, 2, 5, 5, 3, 3};
 
         // evenOdd(n);
@@ -29,8 +31,13 @@ public class BitManipulation {
         // int digit= digitsInBaseFormula(n, 10);
         // System.out.println(digit);
 
-        int pass= pascal(n);
-        System.out.println(pass);
+        // int pass= pascal(n);
+        // System.out.println(pass);
+
+        // System.out.println(power(n));
+
+        int powerIs = aToB(base, power);
+        System.out.println(powerIs);
     }
 
     public static void evenOdd(int n){
@@ -136,5 +143,31 @@ public class BitManipulation {
         int ans= 1<<(n-1);
         return ans;
     }
+
+    // Given a number find out if it's power of 2 or not..
+    public static boolean power(int n){
+        int a= n & (n-1);
+        if( a == 0){
+            return true;
+        }
+        return false;
+    }
+
+    // calculate a^b
+    // 3^6 can be written as 3^(110) in binary and in explanation it can be 3^(2+4).. when computed it will be: 3^(110)= 3^4 * 3^2 * 3^0..
+    public static int aToB(int base, int power){
+        int ans= 1;
+        while(power> 0){ 
+            if((power & 1)==1){ // if our unit digit comes out to be 1 then it means we have to multiply our ans value in base 
+                ans = ans* base;
+            }
+            base = base * base; // if our unit digit is zero which means we just have to square our base value
+            power = power>>1; // doing right shift to get the unit digit binary value
+        }
+        return ans;
+    }
+
+    // given a number n find the number of set bits in it
+    
 
 }
