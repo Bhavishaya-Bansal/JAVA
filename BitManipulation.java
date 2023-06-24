@@ -1,6 +1,6 @@
 public class BitManipulation {
     public static void main(String[] args) {
-        int n= 3;
+        int n= 48;
         int base= 3;
         int power = 6;
         int arr[]= {1, 3, 1, 1, 5, 2, 5, 5, 3, 3};
@@ -36,8 +36,17 @@ public class BitManipulation {
 
         // System.out.println(power(n));
 
-        int powerIs = aToB(base, power);
-        System.out.println(powerIs);
+        // int powerIs = aToB(base, power);
+        // System.out.println(powerIs);
+
+        // int noOfSetBits= noOfSetBits(n);
+        // System.out.println(noOfSetBits);
+
+        // int noOfSetBits2= noOfSetBits2(n);
+        // System.out.println(noOfSetBits2);
+
+        int xor= findXOR(n);
+        System.out.println(xor);
     }
 
     public static void evenOdd(int n){
@@ -168,6 +177,56 @@ public class BitManipulation {
     }
 
     // given a number n find the number of set bits in it
-    
+    // n= 9.. therefore n= 1001.. no of set bits are 2
+    public static int noOfSetBits(int n){
+        int count =0; 
+        while(n>0){
+            if((n&1)== 1){
+                count++;
+            }
+            n= n>>1;
+        }
+        return count;
+    }
 
+    // Another way to find the above ans
+    public static int noOfSetBits2(int n){
+        int count=0;
+        while(n>0){
+            count++;
+            n = n - (n & -n);
+        }
+        return count;
+    }
+
+    // Find XOR of numbers 0 to a
+    // number a                 XOR from 0 to a
+    //    0                           0
+    //    1                         0^1= 1
+    //    2                         0^1^2= 3
+    //    3                           0
+    //    4                           4
+    //    5                           1 
+    //    6                           7
+    //    7                           0
+    //    8                           8
+    //    9                           1
+    // After every four numbers a pattern is repeating
+    public static int findXOR(int n){
+        if(n % 4== 0){
+            return n;
+        }
+        else if(n % 4== 1){
+            return 1;
+        }
+        else if(n % 4== 2){
+            return n+1;
+        }
+        else if(n % 4== 3){
+            return 0;
+        }
+        return -1;
+    }
+
+    // XOR of all numbers between a and b
 }
