@@ -1,30 +1,39 @@
-import java.util.*;
-
-class practise{
-    public static void main(String args[]){
-        Scanner sc= new Scanner(System.in);
-        int arr[]= {23, 4, 1, 54}; 
-        System.out.println(findNumbers(arr));
+class Practise {
+    public static void main(String args[]) {
+        String str = "aaaabbbcc";
+        String ans = compression(str);
+        System.out.println(ans);
     }
 
-    static int findNumbers(int[] nums) {
-        int counter=0;
-        for(int i=0; i<nums.length; i++){
-            if(isEven(nums[i]));
-            counter++;
-        }
-        return counter;
-    }
+    static String compression(String str) {
+        StringBuilder ans = new StringBuilder("");
 
-    static boolean isEven(int n){
-        int count =0;
-        while(n> 0){
-            count++;
-            n= n/10;
+        int numbers = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (i == str.length() - 1) {
+                if ((numbers + 1) == 0 || (numbers + 1) == 1) {
+                    ans.append("" + str.charAt(i));
+                } else {
+                    ans.append("" + str.charAt(i) + (numbers + 1));
+                }
+
+            }
+            else{
+
+                if (str.charAt(i) == str.charAt(i + 1)) {
+                    numbers++;
+                } else {
+                    numbers = numbers + 1;
+                    if (numbers == 1) {
+                        ans.append("" + str.charAt(i));
+                    } else {
+                        ans.append("" + str.charAt(i) + numbers);
+                    }
+                    numbers = 0;
+                }
+            }
+
         }
-        if(count %2 == 0){
-            return true;
-        }
-        return false;
+        return ans.toString();
     }
 }

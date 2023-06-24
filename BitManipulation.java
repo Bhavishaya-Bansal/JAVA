@@ -20,8 +20,17 @@ public class BitManipulation {
         // int aans= once(arr);
         // System.out.println(aans);
 
-        int out= magic(n);
-        System.out.println(out);
+        // int out= magic(n);
+        // System.out.println(out);
+
+        // int output= digitsInBase(n);
+        // System.out.println(output);
+
+        // int digit= digitsInBaseFormula(n, 10);
+        // System.out.println(digit);
+
+        int pass= pascal(n);
+        System.out.println(pass);
     }
 
     public static void evenOdd(int n){
@@ -29,7 +38,7 @@ public class BitManipulation {
         if(ans==1){
             System.out.println("odd");
         }
-        else{
+        else{ 
             System.out.println("even");
         }
     }
@@ -81,23 +90,51 @@ public class BitManipulation {
     //                3 -> 0    1    1  -> 30 (5+25)
     //                4 -> 1    0    0  -> 125
     //                5 -> 1    0    1  -> 130 (125 +5)
-
-    // Find the n'th magic number..
-    // public static int magic(int n){
         
-    // }
-
+    // Find the n'th magic number..
     public static int magic(int n){
         int ans=0;
         int base= 5; 
         while(n>0){
-            int lastDigit= n & 1;
-            n = n>>1; 
+            int lastDigit= n & 1; // last digit in binary our of our nmbr
+            n = n>>1; // right shift to remove the last digit 
             ans= ans + (lastDigit * base);
             base = base* 5;
         }
         return ans;
     }
 
+    // find number of digits in base b..
+    // 6 in decimal form has 1 digit and 6 in binary form has 3 digits (110 -> 6 in binary)
+    public static int digitsInBase(int n){
+        int counter= 0;
+        while(n>0){
+            n= n>>1;
+            counter++;
+        }
+        return counter;
+    }
+
+    // Finding the number of digits in in a particular base using direct formula.. 
+    public static int digitsInBaseFormula(int n, int b){
+        int ans = (int)(Math.log(n)/Math.log(b)) + 1;
+        return ans;
+    } 
+
+    // Pascal's triangle:
+    // 1
+    // 1 1
+    // 1 2 1
+    // 1 3 3 1
+    // 1 4 6 4 1
+    // 1 5 10 10 5 1
+
+    // find the sum of n'th row in pascal's triangle..
+    // sum of each row in a pascal's traingle is nC0+ nC1+ nC2+..nCn= 2^n
+    // sum of n'th row, sum= 2^(n-1)
+    public static int pascal(int n){
+        int ans= 1<<(n-1);
+        return ans;
+    }
 
 }
