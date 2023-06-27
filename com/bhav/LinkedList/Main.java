@@ -9,12 +9,21 @@ public class Main {
         list.insertFirst(2);
         list.insertFirst(3);
         list.insertFirst(4);
+
         list.insertLast(99);
+
+        list.insertEnd(69);
+
         list.insert(111,3);
+
         list.display();
+
         list.deleteFirst();
+
         list.deleteLast();
+
         list.delete(4);
+        
         list.display();
 
         // Doubly Linked List...

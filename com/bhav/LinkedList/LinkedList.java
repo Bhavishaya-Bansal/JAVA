@@ -57,6 +57,27 @@ public class LinkedList {
         size++;
     }
 
+    // Inserting at the end of linked list if 'tail' node is not given
+    public void insertEnd(int value){
+        Node newNode= new Node(value);
+
+        if(head== null){ // if LL is empty. therefore it means we have to enter the first node.
+            head= newNode;
+            return;
+        }
+
+        // created temp node for traversal
+        Node temp = head;
+
+        // taking temp to the last of linked list
+        while(temp.next != null){
+            temp = temp.next;
+        }
+
+        // as temp is at last posn of LL therefore adding next as our newNode
+        temp.next= newNode;
+    }
+
     // Inserting in the Linked List using RECURSION.. (This is most used when we are not given the size or tail variable of our linked list)
     public void insertRec(int val, int index){
         
