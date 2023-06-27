@@ -22,7 +22,11 @@ public class Main {
 
         list.deleteLast();
 
-        list.delete(4);
+        System.out.println(list.delete(4));
+        
+        list.display();
+
+        System.out.println(list.deleteLastNode());
         
         list.display();
 

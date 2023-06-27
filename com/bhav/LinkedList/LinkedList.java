@@ -36,11 +36,11 @@ public class LinkedList {
             insertLast(val);
             return;
         }
-        Node temp = head;
-        for(int i=1; i<index; i++){
+        Node temp = head; 
+        for(int i=1; i<index; i++){ // start 'i' from 1 because temp is at head which is index 0 itself
             temp = temp.next;
         }
-        Node node= new Node(val, temp.next); 
+        Node node= new Node(val, temp.next);  // passing 'temp.next' here because we already have a node after our index present 
         temp.next= node;
         size++;
     }
@@ -76,6 +76,7 @@ public class LinkedList {
 
         // as temp is at last posn of LL therefore adding next as our newNode
         temp.next= newNode;
+        size++;
     }
 
     // Inserting in the Linked List using RECURSION.. (This is most used when we are not given the size or tail variable of our linked list)
@@ -94,7 +95,7 @@ public class LinkedList {
             tail = null;
         }
         size--;
-        return val;
+        return val; // returning the value which was removed 
     }
 
     // Deleteing last node in the Linked List
@@ -106,6 +107,27 @@ public class LinkedList {
         int val = tail.value;
         tail= secondLast;
         tail.next=null;
+        return val;
+    }
+
+    // Deleting the last node is 'tail' node is not given.. returning the value of the node which was deleted
+    public int deleteLastNode(){
+        if(head== null){
+            return -1;
+        }
+        if(head.next== null){
+            return -1;
+        }
+
+        int val=0;
+
+        Node secondLast= head;
+        while(secondLast.next.next != null){
+            secondLast= secondLast.next;
+            val= secondLast.next.value; // as 'secondLast' is now 'secondLast.next' therefore we neet the value of element to it's next
+        }
+        
+        secondLast.next= null;
         return val;
     }
 
@@ -136,10 +158,10 @@ public class LinkedList {
         for(int i=0; i<index; i++){
             node= node.next;
         }
-        return node;
+        return node; // returns refrence pointer to any node
     }
 
-    // Find some particular value of a node
+    // Find some particular node with given value
     public Node find(int value){
         Node node= head;
         while(node!=null){
