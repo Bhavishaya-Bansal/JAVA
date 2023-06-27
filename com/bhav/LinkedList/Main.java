@@ -2,20 +2,20 @@ package com.bhav.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        // System.out.println(" ** Linked List ** ");
-        // LinkedList list = new LinkedList();
-        // list.insertFirst(0);
-        // list.insertFirst(1);
-        // list.insertFirst(2);
-        // list.insertFirst(3);
-        // list.insertFirst(4);
-        // list.insertLast(99);
-        // list.insert(111,3);
-        // list.display();
-        // list.deleteFirst();
-        // list.deleteLast();
-        // list.delete(4);
-        // list.display();
+        System.out.println(" ** Linked List ** ");
+        LinkedList list = new LinkedList();
+        list.insertFirst(0);
+        list.insertFirst(1);
+        list.insertFirst(2);
+        list.insertFirst(3);
+        list.insertFirst(4);
+        list.insertLast(99);
+        list.insert(111,3);
+        list.display();
+        list.deleteFirst();
+        list.deleteLast();
+        list.delete(4);
+        list.display();
 
         // Doubly Linked List...
         // System.out.println(" ** Doubly Linked List ** ");
@@ -32,14 +32,14 @@ public class Main {
         // dll.displayRev();
 
         // Circular Linked List..
-        System.out.println(" ** Circular Linked List ** ");
-        CircularLL cll= new CircularLL();
-        cll.insert(67);
-        cll.insert(68);
-        cll.insert(69);
-        cll.insert(70);
-        cll.display();
-        cll.delete(68);
-        cll.display();
+        // System.out.println(" ** Circular Linked List ** ");
+        // CircularLL cll= new CircularLL();
+        // cll.insert(67);
+        // cll.insert(68);
+        // cll.insert(69);
+        // cll.insert(70);
+        // cll.display();
+        // cll.delete(68);
+        // cll.display();
     }
 }

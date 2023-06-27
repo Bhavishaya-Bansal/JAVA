@@ -11,6 +11,10 @@ public class LinkedList {
         this.size= 0;
     }
 
+
+    // **** INSERTION.. ****
+
+
     // Inserting value at the starting of Singly Linked List
     public void insertFirst(int val){
         Node node = new Node(val);
@@ -58,6 +62,9 @@ public class LinkedList {
         
     }
 
+    // **** DELETION.. ****
+
+
     // Deleting the first element from our singly linked list
     public int deleteFirst(){
         int val = head.value;
@@ -67,15 +74,6 @@ public class LinkedList {
         }
         size--;
         return val;
-    }
-
-    // Get function: to get the value of any particular node at any particular index
-    public Node get(int index){
-        Node node= head;
-        for(int i=0; i<index; i++){
-            node= node.next;
-        }
-        return node;
     }
 
     // Deleteing last node in the Linked List
@@ -107,6 +105,19 @@ public class LinkedList {
         return val;
     }
 
+
+    // **** GET.. FIND.. DISPLAY.. ****
+
+
+    // Get function: to get the value of any particular node at any particular index
+    public Node get(int index){
+        Node node= head;
+        for(int i=0; i<index; i++){
+            node= node.next;
+        }
+        return node;
+    }
+
     // Find some particular value of a node
     public Node find(int value){
         Node node= head;
@@ -131,7 +142,7 @@ public class LinkedList {
     }
 
 
-    private class Node{ // In singly linked list a LL has nodes and that particuylar has only knowledge about the node next to it, that is why we have declared our LL as with value and next( knowledge of next node )
+    private class Node{ // In singly linked list a LL has nodes and that particular node has only knowledge about it's own value and the node next to it, that is why we have declared our LL as with value and next( knowledge of next node )
         private int value;
         private Node next;
 
