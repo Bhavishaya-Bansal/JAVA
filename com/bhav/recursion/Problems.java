@@ -21,8 +21,10 @@ public class Problems {
         
         // output(n);
 
-        reverse(n);
-        System.out.println(ans);
+        // reverse(n);
+        // System.out.println(ans);
+
+        System.out.println(reverse2(n));
 
         
     }
@@ -119,5 +121,20 @@ public class Problems {
         int rem = n % 10;
         ans = ans* 10+ rem;
         reverse(n/10);
+    }
+
+    // finding reverse of a number by using a base variable
+    public static int reverse2(int n){
+        int digits = (int)(Math.log10(n)) +1 ; // number of digits in our 'n'
+        return helper(n, digits);
+    }
+    public static int helper(int n, int digits) {
+        if(n%10 == n){
+            return n;
+        }
+        int rem= n%10;
+        int startingDigits = (int)(rem* Math.pow(10, digits- 1));
+        int ans= startingDigits+ helper(n/10, digits-1);
+        return ans;
     }
 }
