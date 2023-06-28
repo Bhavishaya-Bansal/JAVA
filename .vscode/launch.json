@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ArrayProblems",
+            "request": "launch",
+            "mainClass": "com.bhav.recursion.ArrayProblems",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "Problems",
             "request": "launch",
             "mainClass": "com.bhav.recursion.Problems",
