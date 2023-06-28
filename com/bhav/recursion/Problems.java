@@ -2,7 +2,7 @@ package com.bhav.recursion;
 
 public class Problems {
     public static void main(String[] args) {
-        int n= 14567;
+        int n= 101001001;
 
         // print(n);
 
@@ -24,8 +24,12 @@ public class Problems {
         // reverse(n);
         // System.out.println(ans);
 
-        System.out.println(reverse2(n));
+        // System.out.println(reverse2(n));
 
+        // System.out.println(palindrome(n));
+
+        countZeroes(n);
+        System.out.println(ans);
         
     }
 
@@ -137,4 +141,40 @@ public class Problems {
         int ans= startingDigits+ helper(n/10, digits-1);
         return ans;
     }
+
+    // check if a number is palindrome or not
+    public static boolean palindrome(int n){
+        if(n== reverse2(n)){
+            return true;
+        }
+        return false;
+    }
+
+    // count number of zeroes in a number using outer variable
+    public static void countZeroes(int n){
+        if(n==0){
+            return;
+        }
+
+        int rem= n% 10;
+        if(rem==0){
+            ans++;
+        }
+        countZeroes(n/10);
+    }
+
+    // counting zeroes without using outer variable
+    public static int countZeroes2(int n, int count){
+        if(n==0){
+            return 0;
+        }
+        int rem= n% 10;
+        if(rem== 0){
+            countZeroes2(n/10, count+1);
+        }
+        countZeroes2(n/10, count);
+        return count;
+    }
+
+
 }
