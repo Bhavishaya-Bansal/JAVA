@@ -2,7 +2,7 @@ package com.bhav.recursion;
 
 public class Problems {
     public static void main(String[] args) {
-        int n= 1342;
+        int n= 14567;
 
         // print(n);
 
@@ -15,7 +15,16 @@ public class Problems {
         // int out= sum(n);
         // System.out.println(out);
 
-        System.out.println(sumDigits(n));
+        // System.out.println(sumDigits(n));
+        
+        // System.out.println(prod(n));
+        
+        // output(n);
+
+        reverse(n);
+        System.out.println(ans);
+
+        
     }
 
     // printing from n till 1..
@@ -74,5 +83,41 @@ public class Problems {
         int rem = n% 10;
         int ans = rem + sumDigits(n/10);
         return ans;
+    }
+
+    // finding the produnt of the digits.. ex: num= 1942.. ans = 1*9*4*2.. that is 72
+    public static int prod(int n){
+        // if(n<= 1){ // we can do this.. or we can do 
+        //     return 1;
+        // }
+
+        if(n%10 == n){ // if one digit is remaining, return that digit itself
+            return n;
+        }
+        int ans= n%10 * prod(n/10);
+        return ans;
+    }
+
+    // n-- vs --n
+    public static void output(int n){
+        if(n== 0){
+            return ;
+        }
+        System.out.println(n);
+        // output(n--); // *** error *** this will lead to infinite recursion.. as it will first the value of n in the function and then substract it 
+
+        // but..
+        output(--n);  // this will first decrease the value and then pass it
+    }
+
+    // reverse a number
+    static int ans=0; // making a variable to use in our reversing of number 
+    public static void reverse(int n){
+        if(n== 0){
+            return;
+        }
+        int rem = n % 10;
+        ans = ans* 10+ rem;
+        reverse(n/10);
     }
 }
