@@ -121,12 +121,14 @@ public class LinkedList {
 
         int val=0;
 
+        // finding the second last node
         Node secondLast= head;
         while(secondLast.next.next != null){
             secondLast= secondLast.next;
-            val= secondLast.next.value; // as 'secondLast' is now 'secondLast.next' therefore we neet the value of element to it's next
+            val= secondLast.next.value; // as 'secondLast' is now 'secondLast.next' therefore we need the value of element to it's next
         }
         
+        // changing next of second last to null as that is the node which we have to delete 
         secondLast.next= null;
         return val;
     }

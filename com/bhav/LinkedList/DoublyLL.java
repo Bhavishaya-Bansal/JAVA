@@ -3,12 +3,12 @@ package com.bhav.LinkedList;
 public class DoublyLL {
     private Node head;
 
-    // Insertion in Doubly LL
+    // Inserting at first of our Doubly LL
     public void InsertFirst(int val){
         Node node= new Node(val);
         node.next= head;
         node.prev= null;
-        if(head!=null){
+        if(head!= null){
             head.prev= node;
         }
         head= node;
