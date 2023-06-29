@@ -49,7 +49,11 @@ public class PatternProblems {
         }
     }
 
-    // Another way to solve pattern2
+    // Another way to solve pattern2:
+    // *
+    // * *
+    // * * *
+    // * * * *
     public static void againPattern2(int row,int colm){
         if(row==0){
             return ;
