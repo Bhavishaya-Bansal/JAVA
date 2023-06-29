@@ -4,15 +4,17 @@ import java.util.ArrayList;
 
 public class ArrayProblems {
     public static void main(String[] args) {
-        int arr[]= {3, 2, 18, 1, 9,18, 18};
-        int target= 18;
+        int arr[]= {5, 6, 7, 8, 1, 2, 3};
+        int target= 8;
         // System.out.println(sorted(arr, 0));
 
         // System.out.println(search(arr, target, 0));
 
         // System.out.println(searchAll(arr, target, 0, new ArrayList<Integer>()));
 
-        System.out.println(searchAll2(arr, target, 0));
+        // System.out.println(searchAll2(arr, target, 0));
+
+        System.out.println(rotatedBinary(arr, target, 0, arr.length-1));
     }
 
     // check if an array is sorted or not
@@ -62,5 +64,36 @@ public class ArrayProblems {
         list.addAll(ansFromBelowRecursionCalls); // add all the below recursion calls list ans also in the current list
 
         return list;
+    }
+
+    // Binary search on rotated sorted array..
+    // arr= [5, 6, 7, 8, 9, 1, 2, 3] -> this is a rotated sorted array
+    // target = 7..
+    public static int rotatedBinary(int arr[], int target, int start, int end){
+        if(start> end){
+            return -1;
+        }
+
+        int mid= start + (end- start)/2;
+
+        if(arr[mid]== target){
+            return mid;
+        }
+        if(arr[start] <= arr[mid]){
+            if(target >= arr[start] && target<= arr[mid]){
+                return rotatedBinary(arr, target, start, mid-1);
+            }
+            else{
+                return rotatedBinary(arr, target, mid+1 , end);
+            }
+        }
+        else{
+            if(target>= arr[mid] && target<= arr[end]){
+                return rotatedBinary(arr, target, mid+1, end);
+            }
+            else{
+                return rotatedBinary(arr, target, start, mid-1);
+            }
+        }
     }
 }
