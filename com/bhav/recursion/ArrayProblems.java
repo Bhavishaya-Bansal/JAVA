@@ -1,12 +1,16 @@
 package com.bhav.recursion;
 
+import java.util.ArrayList;
+
 public class ArrayProblems {
     public static void main(String[] args) {
-        int arr[]= {3, 2, 1, 18, 9};
+        int arr[]= {3, 2, 18, 1, 9,18, 18};
         int target= 18;
         // System.out.println(sorted(arr, 0));
 
-        System.out.println(search(arr, target, 0));
+        // System.out.println(search(arr, target, 0));
+
+        System.out.println(searchAll(arr, target, 0, new ArrayList<Integer>()));
     }
 
     // check if an array is sorted or not
@@ -28,5 +32,16 @@ public class ArrayProblems {
             return index;
         }
         return search(arr, target, index+1);
+    }
+
+    
+    public static ArrayList<Integer> searchAll(int arr[], int target, int index, ArrayList<Integer> list){
+        if(index== arr.length){
+            return list;
+        }
+        if(arr[index]== target){
+            list.add(index);
+        }
+        return searchAll(arr, target, index+1, list);
     }
 }
