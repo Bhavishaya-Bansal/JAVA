@@ -16,12 +16,15 @@ public class BubbleSortRecursion {
         if(row== 0){
             return ;
         }
+
         if(colm< row){
             if(arr[colm]> arr[colm+1]){
                 int temp= arr[colm];
                 arr[colm]= arr[colm+1];
                 arr[colm+1]= temp;
             }
+            // System.out.println(Arrays.toString(arr)); // just to check the flow of recursion
+            // System.out.println();
             sort(arr, row, colm+1);
         }
 
