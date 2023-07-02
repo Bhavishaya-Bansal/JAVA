@@ -2,6 +2,7 @@ package com.bhav.recursion;
 
 import java.util.Arrays;
 
+// Code for selection sort using recursion
 public class SelectionSortRecursion {
     public static void main(String[] args) {
         int arr[]= {4, 12, 6, 1, 23, 5, 2, 6, 0};
