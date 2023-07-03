@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MergeSort",
+            "request": "launch",
+            "mainClass": "MergeSort",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "SelectionSortRecursion",
             "request": "launch",
             "mainClass": "com.bhav.recursion.SelectionSortRecursion",

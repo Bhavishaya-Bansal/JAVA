@@ -199,7 +199,6 @@ public class LinkedList {
             this.value = value;
             this.next = next;
         } // constructor when further node is provided
-
     }
 }
 
