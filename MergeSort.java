@@ -3,13 +3,17 @@ import java.util.*;
 public class MergeSort{
 	public static void main(String args[]){
 		int arr[]= {5, 4, 2, 3, 1};
-		arr= sort(arr);
-		System.out.println(Arrays.toString(arr));
+		// arr= sort(arr);
+		// System.out.println(Arrays.toString(arr));
 
 		// if we do..
 		// int ans[] = sort(arr);
 		// System.out.println(Arrays.toString(arr));  
 		// we will get the same array without as our array is not being modified
+
+		sortInPLace(arr, 0, arr.length);
+		System.out.println(Arrays.toString(arr));
+
 	}
 
 	public static int[] sort(int arr[]){
@@ -58,10 +62,65 @@ public class MergeSort{
 		while(j< second.length){
 			mix[k]= second[j];
 			j++;
-			k++;
+			k++; 
 		}
 		// only one of these loops would be true therefore only one of them would execute
 
 		return mix;
+	}
+
+
+
+	// **** MERGE SORT IN-PLACE **** 
+	// Not returning anything just changing the original array
+	public static void sortInPLace(int arr[], int start, int end){
+		if(end- start== 1){ // it means only one element is left
+			return; 
+		}
+		int mid= (start+ end)/2;
+
+		sortInPLace(arr, start, mid);
+		sortInPLace(arr, mid, end);
+
+		mergeInPlace(arr, start, mid, end);
+	}
+
+	public static void mergeInPlace(int[] arr, int start, int mid, int end) {
+		int mix[] = new int[end- start];
+		
+		int i= start; // keeping the pointer from start
+		int j= mid; // keeping the pointer from mid
+		int k= 0; // keeping the pointer for new array mix, from 0
+
+		while(i< mid && j< end){
+			if(arr[i]< arr[j]){
+				mix[k]= arr[i];
+				i++;
+			}
+			else{
+				mix[k]= arr[j];
+				j++;
+			}
+			k++; 
+		}
+
+		// Same process if one of the array's length is shorter and it gets ended before hand so this executes
+		while(i< mid){
+			mix[k]= arr[i];
+			i++;
+			k++;
+		}
+
+		while(j< end){
+			mix[k]= arr[j];
+			j++;
+			k++;
+		}
+		// only one of the loop executes
+
+		// To modify the changes into the original array
+		for(int l=0; l<mix.length; l++){
+			arr[start+ l]= mix[l];
+		}
 	}
 }
