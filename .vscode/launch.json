@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Example",
+            "request": "launch",
+            "mainClass": "com.bhav.Arrays.Example",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "ArrayList",
             "request": "launch",
             "mainClass": "com.bhav.Arrays.ArrayList",
