@@ -4,7 +4,7 @@ import java.util.*;
 
 // Inputing in array and printing the array..
 
-// public class arrays {
+// public class Array {
 //     public static void main(String args[]){
 //     Scanner sc = new Scanner(System.in);
 
@@ -29,7 +29,7 @@ import java.util.*;
 
 // import java.util.*;
 
-// public class arrays {
+// public class Array {
 //     public static void main(String args[]){
 //         Scanner sc = new Scanner(System.in);
 //         int size = sc.nextInt();
@@ -45,7 +45,7 @@ import java.util.*;
 //     }
 // }
 
-// public class arrays {
+// public class Array {
 //     // In this function a new array 'input' is being created therefore our pointer point it to it and the value change will also be done in the new 'input' array created not the one that is passed
 //     public static void change(int input[]){ 
 //     input = new int[5]; // new array being created.. therefore points to a new object
