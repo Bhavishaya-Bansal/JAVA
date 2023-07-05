@@ -1,8 +1,8 @@
 package com.bhav.Arrays;
 
-// import java.util.*;
+import java.util.*;
 
-// Inputting in array and printing the array..
+// Inputing in array and printing the array..
 
 // public class arrays {
 //     public static void main(String args[]){
@@ -22,8 +22,10 @@ package com.bhav.Arrays;
 //     System.out.println(Arrays.toString(numbers)); // another way to print the array it can be done by toString function. It also prints the array in same way 
 
 //     sc.close();    
+//     }
 // }
-// }
+
+// Inputing the 'names'(String) in an array..
 
 // import java.util.*;
 
@@ -43,87 +45,16 @@ package com.bhav.Arrays;
 //     }
 // }
 
-
-
-//**** finding the sum of array ****
-
-// import java.util.*;
-
-// public class arrays{
-//     public static void main(String args[]){
-//         Scanner sc = new Scanner(System.in);
-//         int test= sc.nextInt();
-//         int size= sc.nextInt();
-//         int arr[]= new int[size];
-//         int sum=0;
-
-//         for(int i=0; i<size; i++){
-//             arr[i]= sc.nextInt();
-//         }
-
-//         for(int i=0; i<size; i++){
-//             sum = sum + arr[i];
-//         }
-//         System.out.println(sum);
-
-//         sc.close();
-//     }
-// }
-
-//**** fininding the numbers index user is entering
-
-// import java.util.*;
-
-// public class arrays{
-//     public static void main(String args[]){
-//         Scanner sc = new Scanner(System.in);
-//         int size = sc.nextInt();
-//         int arr[]= new int[size];
-
-//         for(int i=0; i<size; i++){
-//             arr[i]=sc.nextInt();
-//         }
-        
-//         System.out.println("enter the number you want to search ");
-//         int num = sc.nextInt();
-
-//         for(int i =0;i<size;i++){
-//             if(arr[i]==num){
-//                 System.out.println(i);
-//                 break;
-//             }
-//         }
-//         sc.close();
-//     }
-// }
-
-// ppulate the array
-
-// import java.util.*;
-
-// public class arrays{
-//     public static void main(String args[]){
-//         Scanner sc = new Scanner(System.in);
-//         int size = sc.nextInt();
-//         int arr[]= new int[size];
-
-//         for(int i =0; i<size;i++){
-//             System.out.println(arr.);
-//         }
-
-//         sc.close();
-//     }
-// }
-
 // public class arrays {
-//     public static void change(int input[]){
-//     input = new int[5];
+//     // In this function a new array 'input' is being created therefore our pointer point it to it and the value change will also be done in the new 'input' array created not the one that is passed
+//     public static void change(int input[]){ 
+//     input = new int[5]; // new array being created.. therefore points to a new object
 //     input[0] = 15;
 //     }
 
 //     public static void main(String args[]){
 //         int arr[] = new int[5];
 //         change(arr);
-//         System.out.println("output is "+arr[0]);
+//         System.out.println("output is "+arr[0]); // hence at last no change is made
 //     }
 // }
