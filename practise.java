@@ -1,39 +1,43 @@
 class Practise {
     public static void main(String args[]) {
-        String str = "aaaabbbcc";
-        String ans = compression(str);
+        int arr[]= {9, 5, 3, 35, 26, 11};
+        int arr2[]= {23, 34, 45, 56, 17, 19};
+        boolean ans= isCircular(arr2);
         System.out.println(ans);
     }
 
-    static String compression(String str) {
-        StringBuilder ans = new StringBuilder("");
+    public static boolean isCircular(int arr[]){
+        int count= 0;
 
-        int numbers = 0;
-        for (int i = 0; i < str.length(); i++) {
-            if (i == str.length() - 1) {
-                if ((numbers + 1) == 0 || (numbers + 1) == 1) {
-                    ans.append("" + str.charAt(i));
-                } else {
-                    ans.append("" + str.charAt(i) + (numbers + 1));
-                }
-
+        if(arr[0]< arr[arr.length-1]){
+            for(int i= 1; i< arr.length; i++){
+                if(arr[i-1]< arr[i]){
+                    count++;
+                }   
+            }
+            if(count == 1){
+                return true;
             }
             else{
-
-                if (str.charAt(i) == str.charAt(i + 1)) {
-                    numbers++;
-                } else {
-                    numbers = numbers + 1;
-                    if (numbers == 1) {
-                        ans.append("" + str.charAt(i));
-                    } else {
-                        ans.append("" + str.charAt(i) + numbers);
-                    }
-                    numbers = 0;
-                }
+                return false;
             }
-
         }
-        return ans.toString();
+
+        for(int i= 1; i< arr.length; i++){
+            if(arr[i-1]> arr[i]){
+                count++;
+            }   
+        }
+        if(count == 1){
+            if(arr[0]> arr[arr.length- 1]){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
     }
-}
+} 
