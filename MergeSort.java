@@ -31,7 +31,7 @@ public class MergeSort{
 	}
 
 	public static int[] merge(int[] first, int[] second) { // takes first and second half and merges them in sorted manner
-		int mix[]= new int[first.length + second.length];
+		int mix[]= new int[first.length + second.length]; // temporary array
 
 		int i= 0; // pointer for first array
 		int j= 0; // pointer for second array
