@@ -1,4 +1,4 @@
-package com.bhav.recursion;
+package com.bhav.Recursion;
 
 public class Problems {
     public static void main(String[] args) {
