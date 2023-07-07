@@ -1,43 +1,35 @@
+import java.util.*;
 class Practise {
     public static void main(String args[]) {
-        int arr[]= {9, 5, 3, 35, 26, 11};
-        int arr2[]= {23, 34, 45, 56, 17, 19};
-        boolean ans= isCircular(arr2);
-        System.out.println(ans);
+        Scanner sc= new Scanner(System.in);
+        int num = sc.nextInt();
+        func(num);        
     }
 
-    public static boolean isCircular(int arr[]){
-        int count= 0;
-
-        if(arr[0]< arr[arr.length-1]){
-            for(int i= 1; i< arr.length; i++){
-                if(arr[i-1]< arr[i]){
-                    count++;
-                }   
-            }
-            if(count == 1){
-                return true;
+    public static void func(int num){
+        if(num == 0){
+            System.out.println("Num is zero");
+            return;
+        }
+        else if(num< 0){
+            if(num % 2== 0){
+                System.out.println("it is negative even");
+                return;
             }
             else{
-                return false;
-            }
-        }
-
-        for(int i= 1; i< arr.length; i++){
-            if(arr[i-1]> arr[i]){
-                count++;
-            }   
-        }
-        if(count == 1){
-            if(arr[0]> arr[arr.length- 1]){
-                return true;
-            }
-            else{
-                return false;
+                System.out.println("num is negative odd");
+                return;
             }
         }
         else{
-            return false;
+            if(num % 2== 0){
+                System.out.println("it is positive even");
+                return;
+            }
+            else{
+                System.out.println("num is positive odd");
+                return;
+            }
         }
     }
-} 
+}
