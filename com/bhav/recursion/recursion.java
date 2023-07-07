@@ -1,6 +1,6 @@
-package com.bhav.recursion;
+package com.bhav.Recursion;
 
-public class recursion {
+public class Recursion {
     public static void main(String args[]){
         System.out.println(fibo(7));
     }
