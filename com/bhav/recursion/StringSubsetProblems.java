@@ -3,7 +3,7 @@ package com.bhav.Recursion;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StringProblems {
+public class StringSubsetProblems {
     public static void main(String[] args) {
         String s= "baccccad";
         
