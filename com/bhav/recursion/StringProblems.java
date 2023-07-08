@@ -4,14 +4,27 @@ public class StringProblems {
     public static void main(String[] args) {
         String s= "baccccad";
         
-        skipChar("", s); // initially our prcessed string would be empty(as nothing has been processed yet and we will start processing our ans string)
+        // skipChar("", s); // initially our prcessed string would be empty(as nothing has been processed yet and we will start processing our ans string)
 
         String ans= skipChar2(s);
-        System.out.println(ans);        
+        // System.out.println(ans);        
 
         String str= "bccaaaappledde";
         String answer= skipString(str);
-        System.out.println(answer);
+        // System.out.println(answer);
+
+        String original= "baccaaapplejdfg"; // "apple" is present here
+        String original2= "bcappluhfs"; // "apple" is not present here
+        String toRemove= "app";
+        String dontRemoveIfPresent= "apple";
+
+        String output= skipCertainNotWhole(original, toRemove, dontRemoveIfPresent);
+        String output2= skipCertainNotWhole(original2, toRemove, dontRemoveIfPresent);
+
+        System.out.println(output); // "app" does not get removed
+        System.out.println(output2); // "app" does get removed
+        
+
     }
 
     // Method 1 of skipping a character in a string and printing a new string: by using a processed and an unprocessed string.. ex: string= "bacccad".. remove char 'a' then our ans will be "bcccd".. here our processed string is the ans string which is being processed everytime we do our recursion call and unprocessed string is the original string from which we are taking our char and forming the new string
@@ -67,6 +80,21 @@ public class StringProblems {
 
         else{ // if our string does not starts with "apple" then take the first character plus run recursion for the remaining substring
             return str.charAt(0)+ skipString(str.substring(1)); // here we will decrease the size of our string by only sending our string from 1st index till end before sending it to our recursion call as only that element should be removed 
+        }
+    }
+
+    public static String skipCertainNotWhole(String str, String toRemove, String dontRemoveIfPresent){
+        // Base case
+        if(str.isEmpty()){ // here str is our original string
+            return "";
+        }
+
+        if(str.startsWith(toRemove) && !str.startsWith(dontRemoveIfPresent)){
+            return skipCertainNotWhole(str.substring(3), toRemove, dontRemoveIfPresent);
+        }
+
+        else{
+            return str.charAt(0) + skipCertainNotWhole(str.substring(1), toRemove, dontRemoveIfPresent);
         }
     }
 }
