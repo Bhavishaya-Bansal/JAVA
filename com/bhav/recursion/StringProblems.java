@@ -26,13 +26,13 @@ public class StringProblems {
         char ch= unPro.charAt(0);
 
         if(ch == 'a'){ 
-            // if 'a' arrives send the processed String as it is and take the substring of unprocessed after skipping/forgetting/removing 1 character
+            // if 'a' arrives send the processed String as it is and take the substring from 1st character till the end 
             skipChar(pro, unPro.substring(1));
         }
 
         // Basically ' .substring ' skips the number of charaacters we send in it
 
-        else{ // if the char is not 'a' then take that char in our processed String and again take the rest of unprocessed string(which would be the substring after skipping/forgetting/removing that 1 char)
+        else{ // if the char is not 'a' then take that char in our processed String and again take the rest of unprocessed string(which would be the substring from 1st char till the end)
             skipChar(pro+ ch, unPro.substring(1));
         }
     }
@@ -66,7 +66,7 @@ public class StringProblems {
         }
 
         else{ // if our string does not starts with "apple" then take the first character plus run recursion for the remaining substring
-            return str.charAt(0)+ skipString(str.substring(1)); // here we will decrease the size of our string by only removing the first char from our string before sending it to our recursion call as only that element should be removed 
+            return str.charAt(0)+ skipString(str.substring(1)); // here we will decrease the size of our string by only sending our string from 1st index till end before sending it to our recursion call as only that element should be removed 
         }
     }
 }
