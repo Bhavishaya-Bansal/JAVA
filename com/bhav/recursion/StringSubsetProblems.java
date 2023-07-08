@@ -1,6 +1,7 @@
 package com.bhav.Recursion;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class StringSubsetProblems {
@@ -206,5 +207,22 @@ public class StringSubsetProblems {
             }
         }
         return outerList;
+    }
+
+    // Subsets when duplicate elements are present in the array.. Ex: array= {1, 2, 2};
+    // Here whenever we will find a duplicate element, we will only add it to newly added subsets of previous step.. as we are doing this it is only possible when the duplicates are at adjacent positions.. if duplicate elements are not at the adjacent positions then this will not work..
+    public static List<List<Integer>> duplicateSubsets(int arr[]){
+        Arrays.sort(arr);
+        List<List<Integer>> outerList= new Arraylist<>();
+        
+        for(int num: arr){
+            int n= outerList.size();
+            for(int i=0; i< n; i++){
+                List<Integer> internalList= new ArrayList<>(outerList.get(i));
+                internalList.add(num);
+                outerList.add(internalList);
+            }
+        }
+
     }
 }
