@@ -1,5 +1,8 @@
 package com.bhav.Recursion;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class StringProblems {
     public static void main(String[] args) {
         String s= "baccccad";
@@ -21,9 +24,23 @@ public class StringProblems {
         String output= skipCertainNotWhole(original, toRemove, dontRemoveIfPresent);
         String output2= skipCertainNotWhole(original2, toRemove, dontRemoveIfPresent);
 
-        System.out.println(output); // "app" does not get removed
-        System.out.println(output2); // "app" does get removed
+        // System.out.println(output); // "app" does not get removed
+        // System.out.println(output2); // "app" does get removed
+
+        // subseq("", "abc"); // intially our pro will be empty!
+
+        // System.out.println(subSeqList("", "abc"));
         
+        // int value = ASCII('a');
+        // System.out.println(value);
+
+        // subSeqAscii("", "abc");
+
+        // System.out.println(subSeqAcsiiList("", "abc"));
+
+        int arr[] = {1, 2, 3};
+        List<List<Integer>> subset= subSets(arr);
+        System.out.println(subset);
 
     }
 
@@ -96,5 +113,98 @@ public class StringProblems {
         else{
             return str.charAt(0) + skipCertainNotWhole(str.substring(1), toRemove, dontRemoveIfPresent);
         }
+    }
+
+
+    // **** SUBSEQUENCE IN STRINGS.. ****
+    // if the str is str= "abc" then all the possible subsequence will be "a", "ab", "ac", "abc", "b", "bc", "c".. 
+
+    // Using the processed and unprocessed strings in recursion 
+    public static void subseq(String pro, String unPro){
+        // Base case:
+        if(unPro.isEmpty()){ // whenever unPor is empty print the processed one and return 
+            System.out.println(pro);
+            return;
+        }
+
+        // Take the first char.. 
+        char ch= unPro.charAt(0); 
+
+        subseq(pro+ ch, unPro.substring(1)); // Add the character in our answer string subsequences
+        subseq(pro, unPro.substring(1)); // Ignore the character in our answer string subsequences
+    }
+
+    // Return Arraylist of String for all of the subsequences of a string
+    public static ArrayList<String> subSeqList(String pro, String unPro){
+        if(unPro.isEmpty()){
+            ArrayList<String> list= new ArrayList<>();
+            list.add(pro);
+            return list;
+        }
+
+        char ch= unPro.charAt(0);
+
+        ArrayList<String> left= subSeqList(pro+ ch, unPro.substring(1));
+        ArrayList<String> right= subSeqList(pro, unPro.substring(1));
+
+        left.addAll(right);
+        return left; // we can return any one of them either left or right, becuase both would be same
+    }
+
+    // **** ASCII value of any char can be found by.. ****
+    public static int ASCII(char ch){
+        return (ch+ 0); // Just add the char with 0, this will convert it into int
+    }
+
+    // Return subsequences with ASCII values 
+    public static void subSeqAscii(String pro, String unPro){
+        if(unPro.isEmpty()){
+            System.out.println(pro);
+            return;
+        }
+
+        char ch= unPro.charAt(0);
+
+        subSeqAscii(pro+ ch, unPro.substring(1)); // sending in recursive call, the one where we are taking the char
+        subSeqAscii(pro, unPro.substring(1)); // sending in recursive call, the one where we are not taking the char
+        subSeqAscii(pro+ (ch+0), unPro.substring(1)); // sending in recursive call. the one where we are sending the ascii value
+    }
+
+    // Return subsequnce with ascii values in an ArrayList
+    public static ArrayList<String> subSeqAcsiiList(String pro, String unPro){
+        if(unPro.isEmpty()){
+            ArrayList<String> list= new ArrayList<>();
+            list.add(pro);
+            return list;
+        }
+
+        char ch= unPro.charAt(0);
+
+        ArrayList<String> withChar= subSeqAcsiiList(pro+ ch, unPro.substring(1));
+        ArrayList<String> withoutChar= subSeqAcsiiList(pro, unPro.substring(1));
+        ArrayList<String> withAscii= subSeqAcsiiList(pro + (ch+0), unPro.substring(1));
+
+        withChar.addAll(withoutChar);
+        withChar.addAll(withAscii);
+
+        return withChar;
+    }
+
+    // *** Finding all the subsets(subsets are called in arrays) using ITERATION.. ***
+    public static List<List<Integer>> subSets(int arr[]){
+        List<List<Integer>> outerList= new ArrayList<>();
+        
+        outerList.add(new ArrayList<>()); // Initially our outer arraylist will have an empty arraylist 
+
+        // at every step we need to double the size of our outer list by adding the same number of internal lists present in it just one step back in the loop.. and we also need to copy the list element from old half to the new half and then append the rest of the new elements in the new half
+        for(int num: arr){
+            int n= outerList.size(); // storing size of outer list
+            for(int i=0; i< n; i++){
+                List<Integer> internalList = new ArrayList<>(outerList.get(i)); // outerList.get(i) makes the internal List a copy of the outer List 
+                internalList.add(num); // adding the number into our internal list 
+                outerList.add(internalList); // adding the internal list to our outer list so that in next step of for loop new elements can also be used (individual list is getting added into the main list) 
+            }
+        }
+        return outerList;
     }
 }

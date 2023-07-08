@@ -17,7 +17,7 @@ public class ArrayProblems {
         System.out.println(rotatedBinary(arr, target, 0, arr.length-1));
     }
 
-    // check if an array is sorted or not
+    // Ques 1: check if an array is sorted or not
     public static boolean sorted(int arr[], int index){
         // base condn
         if(index== arr.length- 1){
@@ -27,7 +27,7 @@ public class ArrayProblems {
         return ans;
     }
 
-    // linear search using recursion 
+    // Ques 2: linear search using recursion 
     public static int search(int arr[], int target, int index){
         if(index== arr.length-1 && arr[index] != target){
             return -1;
@@ -38,7 +38,7 @@ public class ArrayProblems {
         return search(arr, target, index+1);
     }
 
-    // returning all indexes containg the element in the array 
+    // Ques 3: returning all indexes containg the element in the array 
     public static ArrayList<Integer> searchAll(int arr[], int target, int index, ArrayList<Integer> list){
         if(index== arr.length){
             return list;
@@ -49,7 +49,7 @@ public class ArrayProblems {
         return searchAll(arr, target, index+1, list);
     }
 
-    // returning the list without passing it in the argument
+    // Ques 4: returning the list without passing it in the argument
     public static ArrayList<Integer> searchAll2(int arr[], int target, int index){
         ArrayList<Integer> list= new ArrayList<Integer>(); // this arraylist will get created every tuime, at every recursion function call
         if(index== arr.length){
@@ -66,7 +66,7 @@ public class ArrayProblems {
         return list;
     }
 
-    // Binary search on rotated sorted array..
+    // Ques 5: Binary search on rotated sorted array..
     // arr= [5, 6, 7, 8, 9, 1, 2, 3] -> this is a rotated sorted array
     // target = 7..
     public static int rotatedBinary(int arr[], int target, int start, int end){
