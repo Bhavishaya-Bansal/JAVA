@@ -38,7 +38,7 @@ public class ArrayProblems {
         return search(arr, target, index+1);
     }
 
-    // Ques 3: returning all indexes containg the element in the array 
+    // Ques 3: If duplicate value of target is present, returning all indexes containg the element in the array 
     public static ArrayList<Integer> searchAll(int arr[], int target, int index, ArrayList<Integer> list){
         if(index== arr.length){
             return list;
