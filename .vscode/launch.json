@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "StringSubsetProblems",
+            "request": "launch",
+            "mainClass": "com.bhav.Recursion.StringSubsetProblems",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "StringProblems",
             "request": "launch",
             "mainClass": "com.bhav.Recursion.StringProblems",

@@ -41,8 +41,10 @@ public class StringSubsetProblems {
 
         int arr[] = {1, 2, 3};
         List<List<Integer>> subset= subSets(arr);
-        System.out.println(subset);
+        // System.out.println(subset);
 
+        int arr2[] = {1, 2, 2};
+        System.out.println(duplicateSubsets(arr2));
     }
 
     // Method 1 of skipping a character in a string and printing a new string: by using a processed and an unprocessed string.. ex: string= "bacccad".. remove char 'a' then our ans will be "bcccd".. here our processed string is the ans string which is being processed everytime we do our recursion call and unprocessed string is the original string from which we are taking our char and forming the new string
@@ -213,16 +215,31 @@ public class StringSubsetProblems {
     // Here whenever we will find a duplicate element, we will only add it to newly added subsets of previous step.. as we are doing this it is only possible when the duplicates are at adjacent positions.. if duplicate elements are not at the adjacent positions then this will not work..
     public static List<List<Integer>> duplicateSubsets(int arr[]){
         Arrays.sort(arr);
-        List<List<Integer>> outerList= new Arraylist<>();
+        List<List<Integer>> outerList= new ArrayList<>();
         
-        for(int num: arr){
+        outerList.add(new ArrayList<>());
+
+        // To solve this prblm with duplicated we will keep a start index and an end index and we will place the end index initially at the last element which would be added at every step and at every new addition of lists in our main list we will first make our start equal to end + 1 which would be from where all the new elements would be added in that particular step (new start would be previous end index plus one) and we will reassign our end index to the last element of the list again
+        int start= 0;
+        int end= 0;
+        for(int i= 0; i< arr.length; i++){
+            start= 0;
+            // if my current element is equal to the previous element in that case our start will be equal to end+ 1 as discussed above
+            if(i> 0 && arr[i]< arr[i- 1]){
+                start= end+ 1;
+            } 
+
+            end= outerList.size()- 1;
+
             int n= outerList.size();
-            for(int i=0; i< n; i++){
-                List<Integer> internalList= new ArrayList<>(outerList.get(i));
-                internalList.add(num);
+
+            for(int j= start; j< n; j++){
+                List<Integer> internalList= new ArrayList<>(outerList.get(j));
+                internalList.add(arr[i]);
                 outerList.add(internalList);
             }
         }
 
+        return outerList;
     }
 }
