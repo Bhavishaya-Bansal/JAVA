@@ -22,15 +22,19 @@ public class MazeProblems {
 
         // System.out.println(pathsDiagonalList("", 0, 0, 2, 2));
 
-        System.out.println(nmbrOfPathsAfterObstacles(0, 0, 2, 2, 1, 2, 0));
+        System.out.println(nmbrOfPathsAfterObstacles(0, 0, 3, 3, 2, 2, 0));
 
-        System.out.println(nmbrOfPathsAfterObstacles2(0, 0, 2, 2, 1, 2));
+        System.out.println(nmbrOfPathsAfterObstacles2(0, 0, 3, 3, 2, 2));
 
+        boolean matrix[][]= {
+            {true, true, true},
+            {true, false, true},
+            {true, true, true}
+        };
 
+        // System.out.println(pathsAfterObstructions3(0, 0, matrix));
 
-        pathsAfterObstructions("", 0, 0, 2, 2, 1, 2);
-
-        
+        // pathsAfterObstructions("", 0, 0, 2, 2, 1, 1);
     }
 
     // Number of paths in a maze(matrix) from one index to another.. when we are moving from (0, 0) index to (2,2) index(last idnex of our matrix)
@@ -197,6 +201,21 @@ public class MazeProblems {
 
         return down+ right;
 
+    }   
+
+    // Paths after obstruction.. By taking in boolean matrix
+    public static int pathsAfterObstructions3(int row, int colm, boolean matrix[][]){
+        if((row== 2)||(colm== 2)){
+            return 1;
+        }
+
+        if(matrix[row][colm]== false){
+            return 0;
+        }
+
+        int down= pathsAfterObstructions3(row+1, colm, matrix);
+        int right= pathsAfterObstructions3(row, colm+1, matrix);
+        return down+ right;
     }
 
     // Paths after obstruction..
@@ -218,4 +237,12 @@ public class MazeProblems {
             pathsAfterObstructions(pro+ "R", rowStart, colmStart+ 1, rowEnd, colmEnd, noRowIndex, noColmIndex);
         }
     }
+
+    /* Paths when we are allowed to move up, down, right and left..
+     public static int pathsForAll(int rowStart, int colmStart, int rowEnd, int colmEnd){
+        
+        DONE IN BACKTRACKING
+
+    }
+    */
 }
