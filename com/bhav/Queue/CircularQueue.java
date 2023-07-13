@@ -4,7 +4,7 @@ public class CircularQueue {
     protected int data[];
     private static final int DEFAULT_SIZE= 10;
 
-    protected int front = 0; // pointer -> pointing towards the end
+    protected int front = 0; // pointer -> pointing towards the front 
     protected int end= 0; // pointer -> pointing towards the end
     private int size=0;
 
@@ -28,8 +28,9 @@ public class CircularQueue {
         if(isFull()){
             return false;
         }
-        // interanlly our circular queue 
-        data[end++]= item;
+        // internally our circular queue is a lsit only.. suppose our end is at the last element(data.length) so if we direcly increase our end index it will give us index out of bound.. therefore to move our end to the correct index(here which would be 0) we can get the remainder of end and length of the list, which will give us the correct index
+        data[end]= item;
+        end++;
         end = end % data.length;
         size++;
         return true;
@@ -37,9 +38,10 @@ public class CircularQueue {
 
     public int remove() throws Exception{
         if(isEmpty()){
-            throw new Exception(" CIrcular queue is Empty");
+            throw new Exception(" Circular queue is Empty");
         }
-        int removed= data[front++];
+        int removed= data[front];
+        front= front++;
         front = front % data.length;
         size--;
 
@@ -58,6 +60,7 @@ public class CircularQueue {
             System.out.println("Empty haii bhaii");
             return;
         }
+        // we are using here a do while lopp because here if we will use a for loop in the end somehow our end and front would point at the same element so we will first 'do' the thing then check if our 'i' is less than or equal to end or not 
         int i = front;
         do{
             System.out.print(data[i] + " -> ");
