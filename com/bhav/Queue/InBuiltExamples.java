@@ -4,6 +4,7 @@ import java.util.*;
 
 public class InBuiltExamples {
     public static void main(String[] args) {
+        // Queue is not a class of its own.. it is an inetrface. So we use LinkedList class to define Queue..
         Queue<Integer> queue = new LinkedList<>(); // We have wrote here LinkedList as LL implemets queue
         queue.add(3);
         queue.add(15);

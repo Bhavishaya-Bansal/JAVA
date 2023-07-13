@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Backtracking",
+            "request": "launch",
+            "mainClass": "com.bhav.Recursion.Backtracking",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "MazeProblems",
             "request": "launch",
             "mainClass": "com.bhav.Recursion.MazeProblems",
