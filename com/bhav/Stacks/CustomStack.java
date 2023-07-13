@@ -7,10 +7,10 @@ public class CustomStack {
     int ptr = -1; // Created a pointer to traverse thru the stack-array we have created
 
     public CustomStack(){
-        this(DEFAULT_SIZE); // calling another constructor with a constructor
+        this(DEFAULT_SIZE); // calling another constructor with a constructor..this will call just below one "CustomStack(int size)" constructor..
     }
 
-    public CustomStack(int size){
+    public CustomStack(int size){ // can be called directly but will always be called by above constructor "CustomStack()"
         this.data = new int[size];
     }
 
@@ -47,11 +47,17 @@ public class CustomStack {
     }
 
     public boolean isFull() {
-        return ptr== data.length-1; // ptr is at last index if we do ptr++ it will go out of bound
+        if(ptr== data.length-1){
+            return true; // bcs the ptr is at last index.. if we do ptr++ it will go out of bound
+        }
+        return false;
     }
 
     public boolean isEmpty() {
-        return ptr== -1; 
+        if(ptr== -1){
+            return true;
+        }
+        return false;
     }
 
 }
