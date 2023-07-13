@@ -16,11 +16,17 @@ public class CustomQueue {
     }
 
     public boolean isFull() {
-        return end== data.length; 
+        if(end== data.length){
+            return true;
+        }
+        return false; 
     }
 
     public boolean isEmpty() {
-        return end== 0; 
+        if(end== 0){
+            return true; 
+        }
+        return false;
     }
 
     public boolean insert(int item){

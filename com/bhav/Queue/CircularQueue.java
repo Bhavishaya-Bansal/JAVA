@@ -28,6 +28,7 @@ public class CircularQueue {
         if(isFull()){
             return false;
         }
+        // interanlly our circular queue 
         data[end++]= item;
         end = end % data.length;
         size++;
