@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TicTacToe",
+            "request": "launch",
+            "mainClass": "TicTacToe",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "Backtracking",
             "request": "launch",
             "mainClass": "com.bhav.Recursion.Backtracking",
