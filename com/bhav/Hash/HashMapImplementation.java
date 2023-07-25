@@ -18,7 +18,7 @@ public class HashMapImplementation {
         private int N; // N- total number of buckets 
         private LinkedList<Node> buckets[]; // array of name 'buckets' whose type is of linkedList of node 
 
-        @SuppressWarnings("Unchecked") // To remove unwanted java warnings.. here which will be at line 25 and 49 as we have not given here what kind of linkedlist do we want just we have declared it's size.. so to remove such warning/error we are using it 
+        @SuppressWarnings("Unchecked") // To remove unwanted java warnings.. here which will be at line 25 and 50 as we have not given here what kind of linkedlist do we want just we have declared it's size.. so to remove such warning/error we are using it 
 
         public HashMap(){ // constructor of HashMap class
             this.N= 4; 
@@ -33,6 +33,7 @@ public class HashMapImplementation {
             return Math.abs(bucketIndex) % N; // if our hashCode gives us a negative value for hashCode then we will make it positive by using 'absolute' func.. as for range of bucketIndex we have returned the remainder
         }
 
+        // to find our dataIndex
         private int searchInLL(K key, int bucketIndex){
             LinkedList<Node> LL= buckets[bucketIndex];
             for(int i=0; i<LL.size(); i++){
