@@ -18,7 +18,7 @@ public class HashMapImplementation {
         private int N; // N- total number of buckets 
         private LinkedList<Node> buckets[]; // array of name 'buckets' whose type is of linkedList of node 
 
-        @SuppressWarnings("Unchecked") // To remove unwanted java warnings
+        @SuppressWarnings("Unchecked") // To remove unwanted java warnings.. here which will be at line 25 as we have not given here what kind of linkedlist do we want just we have declared it's size.. so to remove such warning/error we are using it 
 
         public HashMap(){ // constructor of HashMap class
             this.N= 4; 
