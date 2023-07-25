@@ -18,7 +18,7 @@ public class HashMapImplementation {
         private int N; // N- total number of buckets 
         private LinkedList<Node> buckets[]; // array of name 'buckets' whose type is of linkedList of node 
 
-        @SuppressWarnings("Unchecked") // To remove unwanted java warnings.. here which will be at line 25 as we have not given here what kind of linkedlist do we want just we have declared it's size.. so to remove such warning/error we are using it 
+        @SuppressWarnings("Unchecked") // To remove unwanted java warnings.. here which will be at line 25 and 49 as we have not given here what kind of linkedlist do we want just we have declared it's size.. so to remove such warning/error we are using it 
 
         public HashMap(){ // constructor of HashMap class
             this.N= 4; 
@@ -43,6 +43,7 @@ public class HashMapImplementation {
             return -1; // our key deos not exist
         }
 
+        // Rehash makes a bigger data structure(array) to store all the values in that new data structure such that our value for lambda satisfies
         private void rehash(){
             // we need to first store our current array that is buckets here and then we will create a new bigger array(new bigger bucket)
             LinkedList<Node> oldBucket[]= buckets;
@@ -82,7 +83,7 @@ public class HashMapImplementation {
             double lambda = (double)n/N;
             // check the value of lambda for cases:
             if(lambda> 2.0){ // here 2.0 is just an example value taken by us which is our 'k'-> the threshold value
-                // rehashing will occur here..
+                // rehashing will occur here.. means increase in size of array happens
                 rehash();
             }
         }
