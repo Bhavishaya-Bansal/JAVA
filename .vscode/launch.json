@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "LinkedHashmap",
+            "request": "launch",
+            "mainClass": "com.bhav.Hash.LinkedHashmap",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "TicTacToe",
             "request": "launch",
             "mainClass": "TicTacToe",
