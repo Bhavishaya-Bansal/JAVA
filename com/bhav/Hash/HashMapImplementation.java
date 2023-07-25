@@ -15,15 +15,16 @@ public class HashMapImplementation {
         }
 
         private int n; // n- total number of nodes
-        private int N; // n- total number of buckets 
+        private int N; // N- total number of buckets 
         private LinkedList<Node> buckets[]; // array of name 'buckets' whose type is of linkedList of node 
 
         @SuppressWarnings("Unchecked") // To remove unwanted java warnings
+
         public HashMap(){ // constructor of HashMap class
             this.N= 4; 
             this.buckets= new LinkedList[4]; // initialization of array
             for(int i=0; i<4; i++){
-                this.buckets[i]= new LinkedList<>(); // creating empty linkedList on every index of our array--> to store data
+                this.buckets[i]= new LinkedList<>(); // creating empty linkedList on every bucket(every index of our array)--> to store data
             }
         }
 

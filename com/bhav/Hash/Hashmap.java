@@ -42,13 +42,14 @@ public class Hashmap {
             System.out.println(e.getValue());
         }
 
+        // Another way to iterate in our hashmap
         // Iteration method to only get our Keys
         // here we have made a set of String type of name 'keys' and used func keySet which makes set only of our keys
         Set<String> keys= map.keySet();
         // for loop to print it
         for(String key : keys){
             System.out.println(key+ " "+ map.get(key));
-                            // prints key..   this prints value corresponding to key in our pair
+                        // prints key..  this prints value corresponding to key in our pair
         }
 
         // how to remove a pair in our map
