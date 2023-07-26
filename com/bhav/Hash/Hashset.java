@@ -44,9 +44,14 @@ public class Hashset {
         // Iterator has 2 important functions: 1. 'hasNext' function 2. 'next' function
         // Next function directly focuses on finding the next value to the current value on which we are & the hasNext function focuses on telling that whether or not the value on which we has any value next to it or not
 
-        // Working od iterator in hashSet:
+        // Working of iterator in hashSet:
         while(it.hasNext()){
             System.out.println(it.next() );
+        } 
+
+        // Another way to iterate in our hashset is using enhanced for loop:
+        for(int value: set){
+            System.out.println(value);
         }
 
     }
