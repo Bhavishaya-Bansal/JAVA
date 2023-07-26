@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "HashProblems",
+            "request": "launch",
+            "mainClass": "com.bhav.Hash.HashProblems",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "Treeset",
             "request": "launch",
             "mainClass": "com.bhav.Hash.Treeset",
