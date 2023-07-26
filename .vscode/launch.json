@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "LinkedHashset",
+            "request": "launch",
+            "mainClass": "com.bhav.Hash.LinkedHashset",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "Hashset",
             "request": "launch",
             "mainClass": "com.bhav.Hash.Hashset",
