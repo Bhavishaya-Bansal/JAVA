@@ -2,7 +2,7 @@ package com.bhav.Hash;
 
 import java.util.*;
 
-public class LinkedHashset {
+public class Treeset {
     public static void main(String[] args) {
         LinkedHashSet<String> lhs= new LinkedHashSet<>();
         lhs.add("india");
@@ -23,5 +23,16 @@ public class LinkedHashset {
         set.add("spain");
 
         System.out.println(set); // unordered in nature
+
+        TreeSet<String> tset= new TreeSet<>();
+        tset.add("mumbai");
+        tset.add("delhi");
+        tset.add("india");
+        tset.add("iraq");
+        tset.add("haryana");
+        tset.add("spain");
+
+        System.out.println(tset); // Sorted in ascending order
+
     }
 }
