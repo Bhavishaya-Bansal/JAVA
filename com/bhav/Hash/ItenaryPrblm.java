@@ -22,6 +22,7 @@ public static void main(String[] args) {
         }
 
         for(String key: tickets.keySet()){
+            // finding the key that exists in our 'tickets' keyset but not in the reverse keySet is the starting point 
             if(!revMap.containsKey(key)){
                 return key; // comparing keys for both of the hashmap.. the moment we find the key which is present in our ticket's key but not in our revMap's key we return it.. as that would be our starting point
             }
@@ -32,9 +33,10 @@ public static void main(String[] args) {
     public static void path(HashMap<String, String> tickets){
         String start= getStart(tickets);
         System.out.print(start);
+
         for(String key: tickets.keySet()){
-            System.out.print("-> "+ tickets.get(start));
-            start= tickets.get(start);
+            System.out.print("-> "+ tickets.get(start)); // printing th next destination associated with our stat place 
+            start= tickets.get(start); // updating our start to the destination of our start place i.e. the value for the start key
         }
         System.out.println();
     }
