@@ -18,7 +18,7 @@ public class Backtracking {
 
     // Paths if we can move in all directions.. up, down, left, right..
 
-    // BUT THIS CODE WILL GIVE US STAKC OVERFLOW ERROR AS WE WILL BE GOING ON AND ON AND ON ON THE SAME PATH AGAIN AND AGAIN..
+    // BUT THIS CODE WILL GIVE US STACK OVERFLOW ERROR AS WE WILL BE GOING ON AND ON AND ON ON THE SAME PATH AGAIN AND AGAIN..
 
     // To solve this prblm we need backtracking..
 
