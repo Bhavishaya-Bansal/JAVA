@@ -93,7 +93,7 @@ public class Problems {
         return ans;
     }
 
-    // finding the produnt of the digits.. ex: num= 1942.. ans = 1*9*4*2.. that is 72
+    // finding the product of the digits.. ex: num= 1942.. ans = 1*9*4*2.. that is 72
     public static int prod(int n){
         // if(n<= 1){ // we can do this.. or we can do 
         //     return 1;

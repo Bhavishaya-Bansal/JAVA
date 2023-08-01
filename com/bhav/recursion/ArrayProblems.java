@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class ArrayProblems {
     public static void main(String[] args) {
-        int arr[]= {5, 6, 7, 8, 1, 2, 3};
-        int target= 4;
+        int arr[]= {9, 8, 7, 6, 1, 2, 3};
+        int target= 9;
         // System.out.println(sorted(arr, 0));
 
         // System.out.println(search(arr, target, 0));
@@ -23,7 +23,7 @@ public class ArrayProblems {
         if(index== arr.length- 1){
             return true; // if we are reaching the last index it means the elements before this index are sorted
         }
-        boolean ans= arr[index]< arr[index+1] && sorted(arr, index+1); // here we checking for i and i+1 elements as well as are checking the ans from the sorted func which we are running in this step only 
+        boolean ans= arr[index]<= arr[index+1] && sorted(arr, index+1); // here we checking for i and i+1 elements as well as are checking the ans from the sorted func which we are running in this step only 
         return ans;
     }
 
@@ -51,7 +51,7 @@ public class ArrayProblems {
 
     // Ques 4: returning the list without passing it in the argument
     public static ArrayList<Integer> searchAll2(int arr[], int target, int index){
-        ArrayList<Integer> list= new ArrayList<Integer>(); // this arraylist will get created every tuime, at every recursion function call
+        ArrayList<Integer> list= new ArrayList<Integer>(); // this arraylist will get created every time, at every recursion function call
         if(index== arr.length){
             return list;
         }
