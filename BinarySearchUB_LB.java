@@ -75,7 +75,7 @@ public class BinarySearchUB_LB {
         int high = arr.length-1;
 
         if(target > arr[high]){
-                return -1;
+            return -1;
         }
 
         while(low<= high){
