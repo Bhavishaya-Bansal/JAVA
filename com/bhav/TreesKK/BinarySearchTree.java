@@ -78,6 +78,25 @@ public class BinarySearchTree {
         return node; 
     }
 
+    // To check if our tree is balanced or not..
+    public boolean balanced(){
+        return isBalanced(root);
+    }
+
+    private boolean isBalanced(Node node) {
+        // if our node is null which means that our tree is empty.. bcs 
+        if(node == null){
+            return true;
+        }
+
+        // if our height difference between left and right nodes is less than equal to 1 then it's okay.. but we also need to check for our left subtree and right subtree that they are balanced or not.. if all is true then return true.. else false
+        if(Math.abs(height(node.left)- height(node.right))<= 1 && isBalanced(node.left) && isBalanced(node.right)){
+            return true;
+        }
+        
+        return false;
+    }
+
     // To display our tree..
     public void display(){
         // calling the recursive function to display our tree
