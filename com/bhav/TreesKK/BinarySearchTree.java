@@ -28,7 +28,7 @@ public class BinarySearchTree {
 
     }
 
-    // to get height
+    // To get Height..
     public int height(Node node){
         // if there is not ree then the height is -1
         if(node== null){
