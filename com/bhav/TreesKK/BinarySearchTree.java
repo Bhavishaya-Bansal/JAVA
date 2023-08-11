@@ -38,7 +38,9 @@ public class BinarySearchTree {
         return node.height;
     }
 
+    // to check whether a tree is empty or not
     public boolean isEmpty(){
+        // if our root value itself is null then the tree is empty
         if(root== null){
             return true;
         }
