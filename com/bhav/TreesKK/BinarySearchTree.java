@@ -7,7 +7,7 @@ public class BinarySearchTree {
         private int value;
         private Node left; 
         private Node right;
-        private int height; // here we are also taking height just for the sake of simplicity
+        private int height; // here we are also taking height just for the sake of simplicity, as a property of the node
         
         // constructor
         public Node(int value){
@@ -30,7 +30,7 @@ public class BinarySearchTree {
 
     // To get Height..
     public int height(Node node){
-        // if there is not ree then the height is -1
+        // if there is no tree then the height is -1
         if(node== null){
             return -1;
         }
