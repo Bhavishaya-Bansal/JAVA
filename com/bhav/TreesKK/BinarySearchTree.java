@@ -59,9 +59,9 @@ public class BinarySearchTree {
         }
         System.out.println(str+ node.getValue());
         
-        // Makign recursion call for the let subtree 
+        // Making recursion call for the let subtree.. 
         displayTree(node.left, "Left child of: "+ node.getValue()+" : ");
-        // Making recursion call for the right subtree
+        // Making recursion call for the right subtree..
         displayTree(node.right, "Right child of: "+ node.getValue()+" : ");
     }
 
