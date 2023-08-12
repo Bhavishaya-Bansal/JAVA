@@ -68,7 +68,7 @@ public class BinarySearchTree {
         }
 
         // Take the middle element and we will simply insert it in our tree
-        int mid= start+ (end-start)/2;
+        int mid= start+ (end- start)/2;
         // Inserting the middle element of the sorted array in the tree
         this.insert(arr[mid]);
         // call the same reecurive func for the left half..
@@ -140,9 +140,9 @@ public class BinarySearchTree {
         System.out.println(str+ node.getValue());
         
         // Making recursion call for the let subtree.. 
-        displayTree(node.left, "Left child of: "+ node.getValue()+" : ");
+        displayTree(node.left, "Left child of "+ node.getValue()+" is ");
         // Making recursion call for the right subtree..
-        displayTree(node.right, "Right child of: "+ node.getValue()+" : ");
+        displayTree(node.right, "Right child of "+ node.getValue()+" is ");
     }
 
 }

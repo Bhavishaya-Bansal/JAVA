@@ -12,9 +12,11 @@ public class Main {
 
 
         int arr[]= {15, 10, 20, 5, 12, 18, 8};
+        int arr2[]= {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         BinarySearchTree bst= new BinarySearchTree();
 
-        bst.populate(arr);
+        // bst.populate(arr);
+        bst.populateSorted(arr2);
         bst.display();
 
     }
