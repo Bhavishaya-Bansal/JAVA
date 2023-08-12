@@ -89,11 +89,11 @@ public class BinarySearchTree {
             return true;
         }
 
-        // if our height difference between left and right nodes is less than equal to 1 then it's okay.. but we also need to check for our left subtree and right subtree that they are balanced or not.. if all is true then return true.. else false
+        // if our height difference between left and right nodes is less than equal to 1 then it's okay.. but we also need to check for our left subtree and right subtree that they are balanced or not.. if all is true then return true, The tree is balanced.. else false
         if(Math.abs(height(node.left)- height(node.right))<= 1 && isBalanced(node.left) && isBalanced(node.right)){
             return true;
         }
-        
+
         return false;
     }
 
