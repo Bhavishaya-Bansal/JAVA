@@ -47,6 +47,36 @@ public class BinarySearchTree {
         return false;
     }
 
+    // Inserting values in our binary tree.. when we are given an array..
+    public void populate(int arr[]){
+        // we are given an array and we performing insert function on that multiple times
+        for(int i=0; i< arr.length; i++){
+            insert(arr[i]);
+        }
+    }
+
+    // If we are given a sorted array and we have to make our balanced binary search tree out of it(without using self balanced binary trees.. AVL and all) we will do it by..
+    public void populateSorted(int arr[]){
+        // we would take in our middle element as the root node.. then take the left part middle of the array and it's mid would be the left node of the above node.. and the right part's mid element as the right node to that above node..
+        populateTheSorted(arr, 0, arr.length);
+    }
+
+    private void populateTheSorted(int[] arr, int start, int end) {
+        // Base condn
+        if(start>= end){
+            return;
+        }
+
+        // Take the middle element and we will simply insert it in our tree
+        int mid= start+ (end-start)/2;
+        // Inserting the middle element of the sorted array in the tree
+        this.insert(arr[mid]);
+        // call the same reecurive func for the left half..
+        populateTheSorted(arr, start, mid);
+        // and for the right half..
+        populateTheSorted(arr, mid+1, end);
+    }
+
     // Inserting in our Binary Search Tree..
     public void insert(int value){
         // while coming out of recursion calls in the end root will be returned so we will assign all the changes to the root node only..
