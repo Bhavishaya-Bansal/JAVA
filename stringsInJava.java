@@ -40,7 +40,7 @@ public class stringsInJava {
 
         System.out.println((char)('a' + 6)); // converting a to int then adding 6 and the output is finally converted into char.
 
-        System.out.println("a"+ 6); // when an integer is concatinated/added to a string the ineger calls its toString method and get converted into a String (as "1") and gets concatenated to "a".
+        System.out.println("a"+ 6); // when an integer is concatinated/added to a string the integer calls its toString method and get converted into a String (as "1") and gets concatenated to "a".
 
         System.out.println("Bhav"+ new ArrayList<>()); // same arrayList calls it toString method 
 
@@ -49,7 +49,9 @@ public class stringsInJava {
         // System.out.println(new ArrayList<>() + new Integer(56)); // This gives us error because operator '+' in java is only defined for primitives and when any one of the  values is a String. 
         System.out.println(new ArrayList<>() + " " + new Integer(56)); // This thing works because atleast one of the object types is String which provies it to convert into their toString form and concatenate them together and making the entire result to be of String type 
 
-        //  STRING BUILDER
+        // Strings are immutable in java which means String does not allow us to change their value and every time a new object is created.. String Builder helps to change their value.. therefore in StringBuilder only one object is made and the changes are made in that object only.. reference also remains the same which also does not change..
+        
+        //  STRING BUILDER..
 
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < 26; i++) {
@@ -57,5 +59,7 @@ public class stringsInJava {
             builder.append(ch); // it is only changing value in the existing and not creating new string every time which leads to save in memory 
         } 
         System.out.println(builder);
+
+        // Here if we will perform this above operation with Strings then we will end up having a lot of extra space Strings to whom no pointer will be pointing and they would end up taking extra space.. Ex: Here extra "a", "ab", "abc" till "abc..y" will be formed.. which will form object which are not pointed by any refrence variable and end up taking extra memory..
     }
 }
