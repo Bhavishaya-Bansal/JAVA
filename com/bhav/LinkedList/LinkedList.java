@@ -1,5 +1,6 @@
 package com.bhav.LinkedList;
 
+// Linked list are linear 
 public class LinkedList {
 
     private Node head;
