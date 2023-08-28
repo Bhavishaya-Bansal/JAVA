@@ -1,7 +1,7 @@
 package com.bhav.TreesKK;
 
 import java.util.*; 
-
+// In Binary Search tree
 public class BinarySearchTree {
     public class Node{
         private int value;
