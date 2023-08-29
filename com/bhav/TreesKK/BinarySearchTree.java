@@ -1,7 +1,7 @@
 package com.bhav.TreesKK;
 
 import java.util.*; 
-// In Binary Search tree
+// In Binary Search tree we know he left child node has value smaller than the parent node 
 public class BinarySearchTree {
     public class Node{
         private int value;
