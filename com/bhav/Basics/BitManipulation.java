@@ -1,3 +1,4 @@
+package com.bhav.Basics;
 public class BitManipulation {
     public static void main(String[] args) {
         int n= 48;

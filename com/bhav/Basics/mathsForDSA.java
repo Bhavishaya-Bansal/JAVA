@@ -1,3 +1,5 @@
+package com.bhav.Basics;
+
 // import javax.swing.plaf.synth.SynthSpinnerUI;
 
 // code to check if a number is prime or not

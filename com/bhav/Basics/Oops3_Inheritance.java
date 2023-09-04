@@ -1,3 +1,5 @@
+package com.bhav.Basics;
+
 import java.util.*;
 
 public class Oops3_Inheritance {

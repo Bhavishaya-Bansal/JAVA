@@ -9,6 +9,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Array",
+            "request": "launch",
+            "mainClass": "com.bhav.Arrays.Array",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "MergeSort",
+            "request": "launch",
+            "mainClass": "com.bhav.Sorting.MergeSort",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "Hashmap",
             "request": "launch",
             "mainClass": "com.bhav.Hash.Hashmap",

@@ -1,3 +1,5 @@
+package com.bhav.Searching;
+
 import java.util.*;
 
 public class BinarySearchUB_LB {

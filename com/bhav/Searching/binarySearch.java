@@ -1,3 +1,5 @@
+package com.bhav.Searching;
+
 // public class binarySearch {
 //    public static void main(String args[]){
 //     // int arr[] = {-15, -11, -9, 0, 2, 5, 7, 19, 54};
