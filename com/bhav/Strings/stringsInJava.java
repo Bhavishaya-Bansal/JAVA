@@ -1,3 +1,5 @@
+package com.bhav.Strings;
+
 import java.util.*;
 
 public class stringsInJava {
@@ -61,5 +63,21 @@ public class stringsInJava {
         System.out.println(builder);
 
         // Here if we will perform this above operation with Strings then we will end up having a lot of extra space Strings to whom no pointer will be pointing and they would end up taking extra space.. Ex: Here extra "a", "ab", "abc" till "abc..y" will be formed.. which will form object which are not pointed by any refrence variable and end up taking extra memory..
+
+        // String METHODS..
+
+        String named= "Bhavishaya Bansal";
+        
+        // toCharArray: convert string to a char array..
+        System.out.println(Arrays.toString(named.toCharArray()));
+
+        // make the String to lower case
+        System.out.println(named.toLowerCase());
+
+        // .strip removes the white space at the end
+        System.out.println("         Bhav    ".strip());
+
+        // .split will split the string into array everytime a space is found as elements of the array
+        System.out.println(Arrays.toString(named.split(" ")));
     }
 }
