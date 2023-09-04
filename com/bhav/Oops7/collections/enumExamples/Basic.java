@@ -2,7 +2,7 @@ package com.bhav.Oops7.collections.enumExamples;
 
 public class Basic{
     enum Week{
-        Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday; // these are enum constants.. every single one present is public, static and final member.. nad as they are final we cannot create child enums
+        Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday; // these are enum constants.. every single one present is public, static and final member.. and as they are final we cannot create child enums
         // type of all above enums is week
 
         Week(){
