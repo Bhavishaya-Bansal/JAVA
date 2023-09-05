@@ -9,6 +9,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BinarySearchIn2D_Array",
+            "request": "launch",
+            "mainClass": "com.bhav.Searching.BinarySearchIn2D_Array",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "Array",
             "request": "launch",
             "mainClass": "com.bhav.Arrays.Array",
