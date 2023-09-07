@@ -68,6 +68,7 @@ public class Main {
 
         segTree.display();
         System.out.println(segTree.query(1, 6));
-         
+        segTree.display();
+
     }
 }
