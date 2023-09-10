@@ -2,7 +2,7 @@ package com.bhav.TreesKK;
 
 import java.util.*;
 
-// Binary tree are trees which have
+// Binary tree are trees which have either zero, 
 public class BinaryTree {
 
     public BinaryTree(){
