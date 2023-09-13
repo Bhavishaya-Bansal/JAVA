@@ -9,6 +9,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FindIndexOfNum",
+            "request": "launch",
+            "mainClass": "com.bhav.Arrays.FindIndexOfNum",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "ArrayLists",
             "request": "launch",
             "mainClass": "com.bhav.Arrays.ArrayLists",
