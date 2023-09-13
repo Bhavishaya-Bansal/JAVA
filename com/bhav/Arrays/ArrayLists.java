@@ -42,8 +42,8 @@ class ArrayLists{
         System.out.println(size);
 
         // Loops on ArrayList:
-        for(int i=0; i<list.size(); i++){
-            System.out.print(list.get(i));
+        for(int i=0; i< list.size(); i++){
+            System.out.print(list.get(i)+ " ");
         }
         System.out.println();
 
