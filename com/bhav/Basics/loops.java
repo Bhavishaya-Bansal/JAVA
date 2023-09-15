@@ -53,7 +53,7 @@ package com.bhav.Basics;
 //     public static void main(String args[]){
 //         Scanner sc = new Scanner(System.in);
 //         int n = sc.nextInt();
-//         for(int i=1; i <=n ; i++){
+//         for(int i= 1; i<= n ; i++){
 //             System.out.println(i + (i-1));
 //         }
 //     }
@@ -64,10 +64,10 @@ import java.util.*;
 public class loops{
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
-        int j = sc.nextInt();
+        int n = sc.nextInt();
         System.out.println("---");
-        for (int i=1; i <=10; i ++){
-            System.out.println(j*i);
+        for (int i= 1; i<= 10; i ++){
+            System.out.println(n* i);
         }
         sc.close();
     }
