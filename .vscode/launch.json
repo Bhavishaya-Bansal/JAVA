@@ -9,6 +9,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "reverseAnArray",
+            "request": "launch",
+            "mainClass": "com.bhav.Arrays.reverseAnArray",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "FindIndexOfNum",
             "request": "launch",
             "mainClass": "com.bhav.Arrays.FindIndexOfNum",
