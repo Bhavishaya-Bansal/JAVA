@@ -9,6 +9,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "linearSearch",
+            "request": "launch",
+            "mainClass": "com.bhav.Searching.linearSearch",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "loops",
             "request": "launch",
             "mainClass": "com.bhav.Basics.loops",

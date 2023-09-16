@@ -9,7 +9,7 @@ public class Oops1{
 
 
         // Student bhav; // this is just declaring 
-        // bhav.salary; // this is gonna give us an error because it does not exist in the type of bhav, type of bhav is student (and java is a static type language) 
+        // bhav.salary; // this is gonna give us an error because 'salary' does not exist in the type of bhav, type of bhav is student (and java is a static type language) 
         
 
         Student bhav= new Student(); //this is proper making of an object 
