@@ -2,7 +2,7 @@ package com.bhav.TreesKK;
 
 import java.util.*; 
 
-// The whole ocode base working of AVL tree is based on BST just the 'insert' function is changed..
+// The whole code base working of AVL tree is based on BST just the 'insert' function is changed..
 // AVL is one of a kind of Self Balancing Binary Search Tree..
 public class AVL {
     public class Node{
