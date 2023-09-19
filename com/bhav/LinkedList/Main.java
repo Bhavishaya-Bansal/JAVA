@@ -2,48 +2,52 @@ package com.bhav.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        // System.out.println(" ** Linked List ** ");
-        // LinkedList list = new LinkedList();
-        // list.insertFirst(0);
-        // list.insertFirst(1);
-        // list.insertFirst(2);
-        // list.insertFirst(3);
-        // list.insertFirst(4);
+        System.out.println(" ** Linked List ** ");
+        LinkedList list = new LinkedList();
+        list.insertFirst(0);
+        list.insertFirst(1);
+        list.insertFirst(2);
+        list.insertFirst(3);
+        list.insertFirst(4);
 
-        // list.insertLast(99);
+        list.insertLast(99);
 
-        // list.insertEnd(69);
+        list.insertEnd(69);
 
-        // list.insert(111,3);
+        list.insert(111,3);
 
-        // list.display();
+        list.display();
 
-        // list.deleteFirst();
+        list.deleteFirst();
 
-        // list.deleteLast();
+        list.deleteLast();
 
-        // System.out.println(list.delete(4));
+        System.out.println(list.delete(4));
         
-        // list.display();
+        list.display();
 
-        // System.out.println(list.deleteLastNode());
+        System.out.println(list.deleteLastNode());
         
-        // list.display();
+        list.display();
+
+        list.insertRec(3, 7);
+
+        list.display();
 
 
         // Doubly Linked List...
-        System.out.println(" ** Doubly Linked List ** ");
-        DoublyLL dll= new DoublyLL();
-        dll.InsertFirst(100);
-        dll.InsertFirst(99);
-        dll.InsertFirst(98);
-        dll.InsertFirst(97);
-        dll.InsertFirst(96);
-        dll.InsertFirst(95);
-        dll.insertLast(34);
-        dll.insert(99, 33);
-        // dll.display();
-        dll.displayRev();
+        // System.out.println(" ** Doubly Linked List ** ");
+        // DoublyLL dll= new DoublyLL();
+        // dll.InsertFirst(100);
+        // dll.InsertFirst(99);
+        // dll.InsertFirst(98);
+        // dll.InsertFirst(97);
+        // dll.InsertFirst(96);
+        // dll.InsertFirst(95);
+        // dll.insertLast(34);
+        // dll.insert(99, 33);
+        // // dll.display();
+        // dll.displayRev();
 
         // Circular Linked List..
         // System.out.println(" ** Circular Linked List ** ");
