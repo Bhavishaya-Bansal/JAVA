@@ -30,7 +30,7 @@ public class Main {
         
         list.display();
 
-        list.insertRec(3, 7);
+        list.insertRec(4, 70);
 
         list.display();
 

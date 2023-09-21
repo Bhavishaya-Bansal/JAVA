@@ -80,11 +80,22 @@ public class LinkedList {
     }
 
     // Inserting in the Linked List using RECURSION.. (This is most used when we are not given the size or tail variable of our linked list)
-        public void insertRec(int index, int val){
+    public void insertRec(int index, int val){
+        if(index< 0){
+            System.out.println("Invalid index");
+            return;
+        }
+        if(index== 0){
+            Node node= new Node(val);
+            node.next= head;
+            head= node;
+            return;
+        }
         insertRec(head, index, val);
     }
     
     private void insertRec(Node curr, int index, int val){
+        
         if (index == 1) {
             Node node = new Node(val);
             node.next = curr.next;
