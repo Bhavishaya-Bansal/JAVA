@@ -84,7 +84,7 @@ public class BinaryTree {
      *              4            -> 6 kaa right child
      *           9               -> 15 kaa right child
      * 
-     *  --> First comes the main node.. then it's left on a tab space forward and just below it comes the right of that node.. and if we have further more levels downwards then we keep on inserting nodes in the same manner.. first left then ask for the left's lefta nd right.. then just below our left comes right.. then ask for right's left and right.. then move up level (which means TAB space backwards) then print the right (bcs when we are coming out of recursion calls then only we are printing our right node for that particular node) and so on..
+     *  --> First comes the main node.. then it's left on a tab space forward and just below it comes the right of that node.. and if we have further more levels downwards then we keep on inserting nodes in the same manner.. first left then ask for the left's left and right.. then just below our left comes right.. then ask for right's left and right.. then move up level (which means TAB space backwards) then print the right (bcs when we are coming out of recursion calls then only we are printing our right node for that particular node) and so on..
      *  
      */
     public void displayTree(Node node, String str) {
@@ -98,4 +98,39 @@ public class BinaryTree {
         displayTree(node.left, str+ "   ");
         displayTree(node.right, str+ "   ");
     }
+
+    // Here in our prettu display function we are printing our tree in a form kii voh leta hua h.. 
+
+    /*  Above used example will look like:
+            |---->9
+            15
+            |     |---->4
+            |---->6
+            |     |     |---->10
+            |     |---->8  
+    */
+
+    public void prettyDisplay(){
+        prettyDisplay(root, 0);
+    }
+    public void prettyDisplay(Node node, int level){
+        if(node == null){
+            return;
+        }
+        // go till the right most element first.. call the same function and increase the level by one
+        prettyDisplay(node.right, level+1);
+
+        if(level!= 0){ // which means we are not in the root node.. which means we have to add that many spaces(the number of spaces equal to the number of level we are downwards)
+            for(int i=0; i<level-1; i++){
+                System.out.print("|     "); // 2 tab spaces with a dash( | )
+            }
+            System.out.println("|---->"+ node.value);
+        }
+        else{
+            System.out.println(node.value);
+        }
+
+        prettyDisplay(node.left, level+1);
+    }
+    
 }
