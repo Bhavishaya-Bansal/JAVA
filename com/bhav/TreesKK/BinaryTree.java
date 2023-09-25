@@ -134,5 +134,47 @@ public class BinaryTree {
 
         prettyDisplay(node.left, level+1);
     }
-    
+
+    // TREE TRAVERSALS..
+
+    //Pre Order
+    public void preOrder(){
+        preOrderPrint(root);
+    }
+    private void preOrderPrint(Node node) {
+        if(node== null){
+            return;
+        }
+        System.out.print(node.value+"-");
+        preOrderPrint(node.left);
+        preOrderPrint(node.right);
+    }
+
+    //In order
+    public void inOrder(){
+        inOrderPrint(root);
+    }
+    private void inOrderPrint(Node node){
+        if(node== null){
+            return;
+        }
+        inOrderPrint(node.left);
+        System.out.print(node.value+"-");
+        inOrderPrint(node.right);
+    }
+
+    // Post Order
+    public void postOrder(){
+        postOrderPrint(root);
+    }
+    public void postOrderPrint(Node node){
+        if(node== null){
+            return;
+        }
+        postOrderPrint(node.left);
+        postOrderPrint(node.right);
+        System.out.print(node.value+"-");
+    }
+
 }
+

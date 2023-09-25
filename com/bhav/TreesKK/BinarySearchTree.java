@@ -145,6 +145,9 @@ public class BinarySearchTree {
         displayTree(node.right, "Right child of "+ node.getValue()+" is ");
     }
 
+    // TREE TRAVERSALS..
+
+    //Pre Order
     public void preOrder(){
         preOrderPrint(root);
     }
@@ -157,6 +160,7 @@ public class BinarySearchTree {
         preOrderPrint(node.right);
     }
 
+    //In order
     public void inOrder(){
         inOrderPrint(root);
     }
@@ -169,6 +173,7 @@ public class BinarySearchTree {
         inOrderPrint(node.right);
     }
 
+    // Post Order
     public void postOrder(){
         postOrderPrint(root);
     }
