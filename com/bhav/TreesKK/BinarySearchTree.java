@@ -51,7 +51,7 @@ public class BinarySearchTree {
     public void populate(int arr[]){
         // we are given an array and we performing insert function on that multiple times
         for(int i=0; i< arr.length; i++){
-            insert(arr[i]);
+            this.insert(arr[i]);
         }
     }
 
@@ -71,7 +71,7 @@ public class BinarySearchTree {
         int mid= start+ (end- start)/2;
         // Inserting the middle element of the sorted array in the tree
         this.insert(arr[mid]);
-        // call the same reecurive func for the left half..
+        // call the same recurive func for the left half..
         populateTheSorted(arr, start, mid);
         // and for the right half..
         populateTheSorted(arr, mid+1, end);
@@ -143,6 +143,42 @@ public class BinarySearchTree {
         displayTree(node.left, "Left child of "+ node.getValue()+" is ");
         // Making recursion call for the right subtree..
         displayTree(node.right, "Right child of "+ node.getValue()+" is ");
+    }
+
+    public void preOrder(){
+        preOrderPrint(root);
+    }
+    private void preOrderPrint(Node node) {
+        if(node== null){
+            return;
+        }
+        System.out.print(node.getValue()+"-");
+        preOrderPrint(node.left);
+        preOrderPrint(node.right);
+    }
+
+    public void inOrder(){
+        inOrderPrint(root);
+    }
+    private void inOrderPrint(Node node){
+        if(node== null){
+            return;
+        }
+        inOrderPrint(node.left);
+        System.out.print(node.getValue()+"-");
+        inOrderPrint(node.right);
+    }
+
+    public void postOrder(){
+        postOrderPrint(root);
+    }
+    public void postOrderPrint(Node node){
+        if(node== null){
+            return;
+        }
+        postOrderPrint(node.left);
+        postOrderPrint(node.right);
+        System.out.print(node.getValue()+"-");
     }
 
 }

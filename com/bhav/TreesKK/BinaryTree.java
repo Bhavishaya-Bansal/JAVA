@@ -110,6 +110,8 @@ public class BinaryTree {
             |     |---->8  
     */
 
+    // In the code first we are printing the right most node then that particular node then the left of that node.. same way the whole recursion is taking place.. right-node-left
+
     public void prettyDisplay(){
         prettyDisplay(root, 0);
     }
