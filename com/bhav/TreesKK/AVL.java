@@ -83,7 +83,6 @@ public class AVL {
     public void insert(int value){
         // while coming out of recursion calls in the end root will be returned so we will assign all the changes to the root node only..
         root= insertIn(value, root);
-
     }
 
     private Node insertIn(int value, Node node){
@@ -113,21 +112,86 @@ public class AVL {
 
     // Here our rotate function will keep on calling the rotate function(from bottom node(newly added node) to the root node (Bottom-Up)) but will only execute(rotate) on the node that is making our tree unbalanced..
     private Node rotate(Node node) {
-        // left Heavy Case: When Parent(P), Child(C) & Grandchild(G) node all are in same line perform right rotation here..
+        // left Heavy Case: When Parent(P), Child(C) & Grandchild(G) node all are in same line(to the left) perform right rotation here..
         if(height(node.left)- height(node.right)> 1){
             // Left Heavy also has 2 cases:
+
+            // 1. Left-Left Case:
             // PCG all in the same side.. when our left node of our Child node has greater height than right one
             if(height(node.left.left)- height(node.left.right)> 0){ // This will the case when 'G' will lie in the left of the Child node..
                 // Here we have to do Right Rotate on our Parent node that would be our 'node' itself..
                 return rightRotate(node);
             }
 
+            // 2. Left-Right Case: 
             // PCG all three not being in the same side.. when our left node of our Child node has smaller height than right one
             if(height(node.left.left)- height(node.left.right)< 0){ // This is the case when our 'G' lies on the right of the Child node..
-                // Here first we will perfoem
+                // Here first we will perform left rotate on Child and then right rotate on the Parent node..
+                node.left= leftRotate(node.left);
+                return rightRotate(node);
             }
 
         }
+
+        // Right Heavy Case: When Parent(P), Child(C) & Grandchild(G) node all are in same line(to the right) perform right rotation here..
+        if(height(node.left)- height(node.right)> -1){
+            // Right Heavy also has 2 cases: 
+
+            // 1. Right-Right Case:
+            // PCG all in the same side.. when our Child node is in the right of the Parent node and Grandchild node is also at the right of Child node.. And height of left of Child is less than right of Child node..
+            if(height(node.right.right)- height(node.left.right)< 0){ // This is when 'G' lies to the right of the Child node..
+                // Here we have to do Left Rotate on our Parent node that would be our 'node' itself..
+                return leftRotate(node);
+            }
+
+            // 2. Right-Left Case: 
+            // PCG all three not being in the same side.. when our Child node is in the right of the Parent node and Grandchild node is at the left of Child node.. And height of right of Child is less than left of Child node..
+            if(height(node.right.right)- height(node.right.left)< 0){ // This is the case when our 'G' lies on the right of the Child node..
+                // Here first we will perform right rotate on Child and then left rotate on the Parent node..
+                node.right= rightRotate(node.right);
+                return leftRotate(node);
+            }
+        }
+
+        return node;
+    }
+
+    // Right Rotate working..
+    // Here we are passing 'Parent' node in the function(for understanding why refer notebook notes) because that is the top node on which we have to perform our rotation on..
+    public Node rightRotate(Node parent){
+        Node child= parent.left;
+        Node t= child.right;
+
+        // After rotation our changes will be:
+        child.right= parent;
+        parent.left= t;
+
+        // Update the height..
+        parent.height= Math.max(height(parent.left), height(parent.right)+ 1);
+
+        child.height= Math.max(height(child.left), height(child.right)+ 1);
+
+        // Here our new node will become 'Child' node, hence we will return it..
+        return child;
+    }
+
+    // Left Rotate working..
+    // Here we are passing 'Child' node in the function(for understanding why refer notebook notes) because that is the top node on which we have to perform our rotation on..
+    public Node leftRotate(Node child){
+        Node parent= child.right;
+        Node t= parent.left;
+
+        // After rotation our changes will be:
+        parent.left= child;
+        child.right= t;
+
+        // Update the height..
+        parent.height= Math.max(height(parent.left), height(parent.right)+ 1);
+
+        child.height= Math.max(height(child.left), height(child.right)+ 1);
+
+        // Here our new node will become 'Parent' node, hence we will return it..
+        return parent;
     }
 
 
