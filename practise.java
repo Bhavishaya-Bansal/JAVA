@@ -7,7 +7,7 @@ class Practise {
     }
 
     public static boolean repeatedSubstringPattern(String s) {
-        StringBuilder ans= new StringBuilder();
+        StringBuilder game= new StringBuilder();
         for(int i=0; i< s.length()/2; i++){
             ans.append(s.charAt(i));
 
