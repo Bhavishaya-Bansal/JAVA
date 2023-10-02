@@ -2,7 +2,7 @@ package com.bhav.Strings;
 
 import java.util.*;
 
-public class stringsInJava {
+public class StringsInJava {
     public static void main(String[] args) {
         String a = "bhav";
         String b = "bhav";
@@ -79,5 +79,19 @@ public class stringsInJava {
 
         // .split will split the string into array everytime a space is found as elements of the array
         System.out.println(Arrays.toString(named.split(" ")));
+
+
+        // Remove whitespaces..
+        String sentence= "hi   I   am   Bhav   .";
+        System.out.println(sentence);
+
+        System.out.println(sentence.replaceAll("\\s", ""));
+
+        // Split the string..
+
+        String nameList= "Bhav Ram Shyam Abhay Hima";
+        String names[]= nameList.split(" ");
+        System.out.println(Arrays.toString(names));
+
     }
 }
