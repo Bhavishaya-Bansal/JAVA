@@ -31,5 +31,10 @@ public class String_Buffer {
         sb2.reverse();
         System.out.println(sb2);
 
+        // Creating a random string of the size that will be given by the user..
+        int n= 20;
+        String name= RandomString.generate(n);
+        System.out.println(name);
+
     }
 }
