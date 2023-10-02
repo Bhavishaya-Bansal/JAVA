@@ -9,6 +9,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "String_Buffer",
+            "request": "launch",
+            "mainClass": "com.bhav.Strings.String_Buffer",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "com.bhav.TreesKK.Main",
