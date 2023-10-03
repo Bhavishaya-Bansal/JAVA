@@ -1,5 +1,7 @@
 package com.bhav.Strings;
 
+// import java.text.DecimalFormat;
+
 public class String_Buffer {
     public static void main(String[] args) {
         // String Buffer constructor type 1.. Created an object of type StringBuffer.. creates an empty string buffer
@@ -35,6 +37,10 @@ public class String_Buffer {
         int n= 20;
         String name= RandomString.generate(n);
         System.out.println(name);
+
+        // Rounding off..
+        DecimalFormat df= new DecimalFormat("00.0000");
+        System.out.println(df.format(7.29)); 
 
     }
 }

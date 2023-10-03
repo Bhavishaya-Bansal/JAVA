@@ -2,6 +2,7 @@ package com.bhav.Strings;
 
 import java.util.*;
 
+
 public class StringsInJava {
     public static void main(String[] args) {
         String a = "bhav";
@@ -90,8 +91,10 @@ public class StringsInJava {
         // Split the string..
 
         String nameList= "Bhav Ram Shyam Abhay Hima";
+
+        // we can split it across spaces, commas, full-stops or anything..
         String names[]= nameList.split(" ");
-        System.out.println(Arrays.toString(names));
+        System.out.println(Arrays.toString(names));       
 
     }
 }
