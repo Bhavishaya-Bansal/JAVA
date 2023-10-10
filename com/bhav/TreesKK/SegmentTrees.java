@@ -1,5 +1,8 @@
 package com.bhav.TreesKK;
 
+// Every node in segment trees includes an interval and the value for the query applied on that interval..
+// Ex: arr= [2, 3, 4, 5, 6] and query is 'addtion'.. root node will have the interval 0 to 4 and the query value will be 2+3+4+5+6 i.e. 20..
+
 public class SegmentTrees {
     private static class Node{
         int data; // node data
