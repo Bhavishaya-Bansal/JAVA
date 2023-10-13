@@ -8,7 +8,7 @@ public class SegmentTrees {
         int data; // node data
         int startInterval; // interval starting 
         int endInterval; // interval ending
-        Node left;
+        Node left; 
         Node right; 
 
         public Node(int startInterval, int endInterval){
