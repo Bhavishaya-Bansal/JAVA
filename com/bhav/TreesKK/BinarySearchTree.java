@@ -7,7 +7,7 @@ public class BinarySearchTree {
         private int value;
         private Node left; 
         private Node right;
-        private int height; // here we are also taking height just for the sake of simplicity, as a property of the node
+        private int height; // here we are also taking height just for the sake of simplicity, as a property of the node..
         
         // constructor
         public Node(int value){
