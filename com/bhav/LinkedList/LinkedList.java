@@ -23,11 +23,12 @@ public class LinkedList {
         // If the linked list is empty, set the new node as the head
         if (head == null) {
             head = newNode;
-        } else {
-            // If the list is not empty, make the new node the new head
-            newNode.next = head;
-            head = newNode;
-        }
+            return;
+        } 
+        // If the list is not empty, make the new node the new head
+        newNode.next = head;
+        head = newNode;
+        return;
     }
 
     // Inserting value at the starting of Singly Linked List
