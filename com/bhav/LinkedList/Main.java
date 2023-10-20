@@ -4,33 +4,42 @@ public class Main {
     public static void main(String[] args) {
         System.out.println(" ** Linked List ** ");
         LinkedList list = new LinkedList();
+
+        list.insertAtFirst(0);
+        list.insertAtFirst(1);
+        list.insertAtFirst(2);
+        list.insertAtFirst(3);
+        list.insertAtFirst(4);
+
+        list.display();
+
         list.insertFirst(0);
         list.insertFirst(1);
         list.insertFirst(2);
         list.insertFirst(3);
         list.insertFirst(4);
 
-        list.insertLast(99);
+        // list.insertLast(99);
 
-        list.insertEnd(69);
+        // list.insertEnd(69);
 
-        list.insert(111,3);
+        // list.insert(111,3);
 
-        list.display();
+        // list.display();
 
-        list.deleteFirst();
+        // list.deleteFirst();
 
-        list.deleteLast();
+        // list.deleteLast();
 
-        System.out.println(list.delete(4));
+        // System.out.println(list.delete(4));
         
-        list.display();
+        // list.display();
 
-        System.out.println(list.deleteLastNode());
+        // System.out.println(list.deleteLastNode());
         
-        list.display();
+        // list.display();
 
-        list.insertRec(4, 70);
+        // list.insertRec(4, 70);
 
         list.display();
 

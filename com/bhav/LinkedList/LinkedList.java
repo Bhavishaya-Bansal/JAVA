@@ -15,6 +15,20 @@ public class LinkedList {
 
     // **** INSERTION.. ****
 
+    // Another method to insert at first posn in the linked list (without using tail pointer)
+    public void insertAtFirst(int val) {
+        // Create a new node with the given value
+        Node newNode = new Node(val);
+    
+        // If the linked list is empty, set the new node as the head
+        if (head == null) {
+            head = newNode;
+        } else {
+            // If the list is not empty, make the new node the new head
+            newNode.next = head;
+            head = newNode;
+        }
+    }
 
     // Inserting value at the starting of Singly Linked List
     public void insertFirst(int val){
