@@ -65,7 +65,7 @@ public class AVL {
 
     private void populateTheSorted(int[] arr, int start, int end) {
         // Base condn
-        if(start>= end){
+        if(start> end){
             return;
         }
 
@@ -74,14 +74,14 @@ public class AVL {
         // Inserting the middle element of the sorted array in the tree
         this.insert(arr[mid]);
         // call the same recurive func for the left half..
-        populateTheSorted(arr, start, mid);
+        populateTheSorted(arr, start, mid-1);
         // and for the right half..
         populateTheSorted(arr, mid+1, end);
     }
 
     // Inserting in our AVL Tree..
     public void insert(int value){
-        // while coming out of recursion calls in the end root will be returned so we will assign all the changes to the root node only..
+        // while coming out of recursion calls in the end 'root' will be returned so we will assign all the changes to the root node only..
         root= insertIn(value, root);
     }
 
@@ -102,7 +102,7 @@ public class AVL {
             node.right= insertIn(value, node.right);
         }
 
-        // now while we are getting out of recursion call, as we are adding a new node the height of the node will be changed so.. we have to change the height of each node to be.. max between the left height and the right height of that node and that would be increased by one(as the max of left and right side would give us the height of the child node of the current node at which we are at)..
+        // now while we are getting out of recursion call, as we are adding a new node the height of the node will be changed so.. we have to change the height of each node to be.. max between the left height and the right height of that node and that would be increased by one(as the max of left and right side would give us the height of the child node of the current node at which we are at and plus 1 would be done because we have added a new node in our tree)..
         node.height= Math.max(height(node.left), height(node.right))+ 1;
 
         // Whenever we are entering any new node in our tree so we have to call the rotate function on that particular node and that particular node while returning outside will provide us the root node..
@@ -110,20 +110,20 @@ public class AVL {
     }
 
 
-    // Here our rotate function will keep on calling the rotate function(from bottom node(newly added node) to the root node (Bottom-Up)) but will only execute(rotate) on the node that is making our tree unbalanced..
+    // Here our rotate function will keep on calling the rotate function(from bottom node(newly added node) to the root node (Bottom-Up Approach)) but will only execute(rotate) on the node that is making our tree unbalanced..
     private Node rotate(Node node) {
-        // left Heavy Case: When Parent(P), Child(C) & Grandchild(G) node all are in same line(to the left) perform right rotation here..
+        // left Heavy Case: When Child(C) node is attached to the left of the Parent(P) node.. When height of left child node is greater than the height of right child node..
         if(height(node.left)- height(node.right)> 1){
             // Left Heavy also has 2 cases:
 
-            // 1. Left-Left Case:
-            // PCG all in the same side.. when our left node of our Child node has greater height than right one
+            // 1. Left-Left Case: Right Rotate on Parent node
+            // PCG all in the same side.. when the left node of our Child node has greater height than right one..
             if(height(node.left.left)- height(node.left.right)> 0){ // This will the case when 'G' will lie in the left of the Child node..
                 // Here we have to do Right Rotate on our Parent node that would be our 'node' itself..
                 return rightRotate(node);
             }
 
-            // 2. Left-Right Case: 
+            // 2. Left-Right Case: Left Rotate on Child node and then Right Rotate on Parent node
             // PCG all three not being in the same side.. when our left node of our Child node has smaller height than right one
             if(height(node.left.left)- height(node.left.right)< 0){ // This is the case when our 'G' lies on the right of the Child node..
                 // Here first we will perform left rotate on Child and then right rotate on the Parent node..
@@ -133,18 +133,18 @@ public class AVL {
 
         }
 
-        // Right Heavy Case: When Parent(P), Child(C) & Grandchild(G) node all are in same line(to the right) perform right rotation here..
-        if(height(node.left)- height(node.right)> -1){
+        // Right Heavy Case: When Child(C) node is attached to the right of the Parent(P) node.. When height of right child node is greater than the height of left child node..
+        if(height(node.right)- height(node.left)> 1){
             // Right Heavy also has 2 cases: 
 
-            // 1. Right-Right Case:
+            // 1. Right-Right Case: Left Rotate on Parent node
             // PCG all in the same side.. when our Child node is in the right of the Parent node and Grandchild node is also at the right of Child node.. And height of left of Child is less than right of Child node..
-            if(height(node.right.right)- height(node.left.right)< 0){ // This is when 'G' lies to the right of the Child node..
+            if(height(node.right.right)- height(node.right.left)> 0){ // This is when 'G' lies to the right of the Child node..
                 // Here we have to do Left Rotate on our Parent node that would be our 'node' itself..
                 return leftRotate(node);
             }
 
-            // 2. Right-Left Case: 
+            // 2. Right-Left Case: Right Rotate on Child node then Left Rotate on Parent node
             // PCG all three not being in the same side.. when our Child node is in the right of the Parent node and Grandchild node is at the left of Child node.. And height of right of Child is less than left of Child node..
             if(height(node.right.right)- height(node.right.left)< 0){ // This is the case when our 'G' lies on the right of the Child node..
                 // Here first we will perform right rotate on Child and then left rotate on the Parent node..
@@ -157,7 +157,7 @@ public class AVL {
     }
 
     // Right Rotate working..
-    // Here we are passing 'Parent' node in the function(for understanding why refer notebook notes) because that is the top node on which we have to perform our rotation on..
+    // Here we are passing 'Parent' node in the function(for understanding why refer notebook notes bcs in the notebook the main node in the diagram is the 'Parent' node) because that is the top node on which we have to perform our rotation on..
     public Node rightRotate(Node parent){
         Node child= parent.left;
         Node t= child.right;
@@ -176,7 +176,7 @@ public class AVL {
     }
 
     // Left Rotate working..
-    // Here we are passing 'Child' node in the function(for understanding why refer notebook notes) because that is the top node on which we have to perform our rotation on..
+    // Here we are passing 'Child' node in the function(for understanding why refer notebook notes bcs in the notebook the main node in the diagram is 'Child' node) because that is the top node on which we have to perform our rotation on..
     public Node leftRotate(Node child){
         Node parent= child.right;
         Node t= parent.left;
