@@ -1,7 +1,7 @@
 package com.bhav.TreesKK;
 
 import java.util.*; 
-// In Binary Search tree we know he left child node has value smaller than the parent node and the right child node has value greater than the parent node..
+// In Binary Search tree we know the left child node has value smaller than the parent node and the right child node has value greater than the parent node..
 public class BinarySearchTree {
     public class Node{
         private int value;
@@ -58,12 +58,12 @@ public class BinarySearchTree {
     // If we are given a sorted array and we have to make our balanced binary search tree out of it(without using self balanced binary trees.. AVL and all) we will do it by..
     public void populateSorted(int arr[]){
         // we would take in our middle element as the root node.. then take the left part middle of the array and it's mid would be the left node of the above node.. and the right part's mid element as the right node to that above node..
-        populateTheSorted(arr, 0, arr.length);
+        populateTheSorted(arr, 0, arr.length- 1);
     }
 
     private void populateTheSorted(int[] arr, int start, int end) {
         // Base condn
-        if(start>= end){
+        if(start> end){
             return;
         }
 
@@ -72,7 +72,7 @@ public class BinarySearchTree {
         // Inserting the middle element of the sorted array in the tree
         this.insert(arr[mid]);
         // call the same recurive func for the left half..
-        populateTheSorted(arr, start, mid);
+        populateTheSorted(arr, start, mid-1);
         // and for the right half..
         populateTheSorted(arr, mid+1, end);
     }
@@ -101,7 +101,7 @@ public class BinarySearchTree {
             node.right= insertIn(value, node.right);
         }
 
-        // now while we are getting out of recursion call, as we are adding a new node the height of the node will be changed so.. we have to change the height of each node to be.. max between the left height and the right height of that node and that would be increased by one(as the max of left and right side would give us the height of the child node of the current node at which we are at)..
+        // now while we are getting out of recursion call, as we are adding a new node the height of the node will be changed so.. we have to change the height of each node to be.. max between the left height and the right height of that node and that would be increased by one(as the max of left and right side would give us the height of the child node of the current node at which we are at and plus 1 would be done because we have added a new node in our tree)..
         node.height= Math.max(height(node.left), height(node.right))+ 1;
 
         // whenever we are getting out of recursion call we will return the nodes that were at the posn earlier and were called in the recursion stack as it is.. we will do so because if we will not do so our tree will change
