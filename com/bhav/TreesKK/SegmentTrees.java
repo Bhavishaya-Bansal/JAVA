@@ -21,7 +21,7 @@ public class SegmentTrees {
 
     public SegmentTrees(int arr[]){
         //create tree using our array
-        this.root= constructTree(arr, 0, arr.length- 1);
+        this.root= constructTree(arr, 0, arr.length- 1);..
     }
 
     // we will return our node here
