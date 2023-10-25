@@ -6,7 +6,7 @@ import java.util.*;
 // Breadth First Searh.. performing operations by going across the Breadth of the tree first.. Like: Displaying the node of the tree across the Breadth OR calculating the diameter of the tree..
 
 public class BreadthFirstSearch {
-    // Definition for a binary tree node.
+    // Definition for a binary tree node..
     public class TreeNode {
         int val;
         TreeNode left;
