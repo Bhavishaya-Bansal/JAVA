@@ -9,6 +9,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Practise",
+            "request": "launch",
+            "mainClass": "Practise",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "StringsInJava",
             "request": "launch",
             "mainClass": "com.bhav.Strings.StringsInJava",
