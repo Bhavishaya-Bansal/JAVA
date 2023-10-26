@@ -2,7 +2,7 @@ package com.bhav.TreesKK;
 
 import java.util.*;
 
-// Here we are returning a List<List<Integer>> in Level Order (by using BFS)..
+// Here we are performing Level Order Traversal(BFS)..
 // Breadth First Searh.. performing operations by going across the Breadth of the tree first.. Like: Displaying the node of the tree across the Breadth OR calculating the diameter of the tree..
 
 public class BreadthFirstSearch {
@@ -20,6 +20,7 @@ public class BreadthFirstSearch {
         }
     }
 
+    // returns a List<List<Integer>> with each level's node..
     public List<List<Integer>> BFS(TreeNode root) {
         List<List<Integer>> result= new ArrayList<>();
 
@@ -50,5 +51,27 @@ public class BreadthFirstSearch {
             result.add(currentLevel);
         }
         return result;
+    }
+
+    // If we only have to print the nodes in Level Order..
+    public static void print(TreeNode root){
+        if(root== null){
+            return;
+        }
+
+        Queue<TreeNode> queue= new LinkedList<>();
+        queue.offer(root);
+
+        while(!queue.isEmpty()){
+            TreeNode node= queue.poll();
+            System.out.println(node.val+ " ");
+
+            if(node.left!= null){
+                queue.offer(node.left);
+            }
+            if(node.right!= null){
+                queue.offer(node.right);
+            }
+        }
     }
 }
