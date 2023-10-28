@@ -63,14 +63,14 @@ public class BreadthFirstSearch {
         queue.offer(root);
 
         while(!queue.isEmpty()){
-            TreeNode node= queue.poll();
-            System.out.println(node.val+ " ");
+            TreeNode tempNode= queue.poll();
+            System.out.println(tempNode.val+ " ");
 
-            if(node.left!= null){
-                queue.offer(node.left);
+            if(tempNode.left!= null){
+                queue.offer(tempNode.left);
             }
-            if(node.right!= null){
-                queue.offer(node.right);
+            if(tempNode.right!= null){
+                queue.offer(tempNode.right);
             }
         }
     }
