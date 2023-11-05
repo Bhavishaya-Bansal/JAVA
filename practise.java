@@ -1,30 +1,48 @@
-import java.util.*;
+class practise {
 
-class Practise{
-    public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
-        String s= "AbhayIsBitch..";
-        String sub= "IsBi";
-        boolean flag= false;
+	int getValue() {
 
-        for(int i= 0; i< s.length(); i++){
-            if(s.charAt(i)== sub.charAt(0)){
-                int c= i;
-                flag= true;
-                for(int j=0; j< sub.length(); j++){
-                    if(s.charAt(c)!= sub.charAt(j)){
-                        flag = false;
-                        break;
-                    }
-                    c++;
-                }
-                if(flag) {System.out.println("exists");
-                break;}
-            }
-        }
+		int returnValue = 10;
 
-        if(!flag){
-            System.out.println("ille");
-        }
-    }
+		try {
+
+			String[] Languages = {
+
+					"Try block",
+
+					"Try block is running"
+
+			};
+
+			System.out.println(Languages[1]);
+
+		} catch (Exception e) {
+
+			System.out.println("Catch Block :" + returnValue);
+
+			return returnValue;
+
+		} finally {
+
+			returnValue += 10;
+
+			System.out.println("Finally Block :" + returnValue);
+
+		}
+
+		return returnValue;
+
+	}
+
+	public static void main(String args[]) {
+
+		practise
+
+		var = new practise();
+
+		System.out.println("Main Block:" +
+
+				var.getValue());
+
+	}
 }
