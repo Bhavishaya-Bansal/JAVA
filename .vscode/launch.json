@@ -9,6 +9,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "practise",
+            "request": "launch",
+            "mainClass": "practise",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Problems",
+            "request": "launch",
+            "mainClass": "com.bhav.Recursion.Problems",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Recursion",
+            "request": "launch",
+            "mainClass": "com.bhav.Recursion.Recursion",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "com.bhav.Heaps.Main",
