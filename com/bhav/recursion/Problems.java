@@ -2,7 +2,7 @@ package com.bhav.Recursion;
 
 public class Problems {
     public static void main(String[] args) {
-        int n= 1111;
+        int n= 7;
 
         // print(n);
 
@@ -10,7 +10,7 @@ public class Problems {
 
         // both(n);
 
-        // System.out.println(fact(n));
+        System.out.println(fact(n));
 
         // int out= sum(n);
         // System.out.println(out);
@@ -65,11 +65,10 @@ public class Problems {
 
     // factorial of a number
     public static int fact(int n){
-        int ans= 1;
         if(n<= 1){
             return 1;
         }
-        ans = n* fact(n-1);
+        int ans = n* fact(n-1);
         return ans;
     }
 
