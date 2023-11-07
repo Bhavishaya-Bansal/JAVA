@@ -2,7 +2,7 @@ package com.bhav.Recursion;
 
 public class Recursion {
     public static void main(String args[]){
-        System.out.println(fibo(7));
+        System.out.println(fibo(11));
     }
 
     static int fibo(int n){
