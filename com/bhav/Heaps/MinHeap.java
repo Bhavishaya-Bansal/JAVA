@@ -49,6 +49,7 @@ public class MinHeap<T extends Comparable<T>> {
         upHeap(list.size()- 1); // calling 'upHeap' from the last index..
     }
 
+    // Here we are moving upwards in our heap from the bottom..
     private void upHeap(int index) {
         // Base condn
         if(index== 0){
@@ -91,6 +92,7 @@ public class MinHeap<T extends Comparable<T>> {
         return temp;
     }
 
+    // Here we are moving downwards in our heap from the top..
     private void downHeap(int index) {
         // Take our current element that we are at(i.e. the top element of the heap) to be the minimum..
         int min= index;
