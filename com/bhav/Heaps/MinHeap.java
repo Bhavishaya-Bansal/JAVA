@@ -56,7 +56,7 @@ public class MinHeap<T extends Comparable<T>> {
             return;
         }
 
-        // here we will first check for the parent..
+        // here we will find the parent element and then chek it with the current element(i.e. child of the 'p' element)..
         int p= parent(index);
 
         // we will check that is our parent greater than the current item(that we are inserting) or not.. If the current item is smaller than our parent then Swap.. (As we are forming a min heap here)
@@ -94,14 +94,14 @@ public class MinHeap<T extends Comparable<T>> {
 
     // Here we are moving downwards in our heap from the top..
     private void downHeap(int index) {
-        // Take our current element that we are at(i.e. the top element of the heap) to be the minimum..
+        // Assume our current element that we are at(i.e. the top element of the heap) to be the minimum..
         int min= index;
 
         // And compare the 'min' with left and right child of that current index..
         int left= left(index);
         int right= right(index);
 
-        // check if our left exists in our list our not
+        // check if our left exists in our list our not.. for our left to exist it should be smaller than our list's size..
         if(left< list.size()){
             // then further check whether our current element has value smaller than the left child or not.. If not then SWAP them..
             if(list.get(min).compareTo(list.get(left))> 0){
@@ -121,5 +121,10 @@ public class MinHeap<T extends Comparable<T>> {
             swap(min, index);
             downHeap(min);
         } 
+    }
+
+    // Performing HEAP SORT on Min Heap:
+    public ArrayList<T heapsort() throws Exception{
+        
     }
 }
