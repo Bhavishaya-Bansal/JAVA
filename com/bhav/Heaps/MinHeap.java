@@ -124,7 +124,13 @@ public class MinHeap<T extends Comparable<T>> {
     }
 
     // Performing HEAP SORT on Min Heap:
-    public ArrayList<T heapsort() throws Exception{
-        
+    public ArrayList<T> heapsort() throws Exception{
+        ArrayList<T> ans= new ArrayList<>();
+
+        // Until our list is not empty we have to remove the elements from the 'list' and add it into our 'ans' list
+        while(!list.isEmpty()){
+            ans.add(this.remove());
+        }
+        return ans;
     }
 }

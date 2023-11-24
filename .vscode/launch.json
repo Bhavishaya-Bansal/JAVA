@@ -9,6 +9,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.bhav.Heaps.Main",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "Practise",
             "request": "launch",
             "mainClass": "Practise",
