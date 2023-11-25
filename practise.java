@@ -5,7 +5,6 @@ class practise {
 		int returnValue = 10;
 
 		try {
-
 			String[] Languages = {
 
 					"Try block",
