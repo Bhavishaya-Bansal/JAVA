@@ -6,7 +6,7 @@ public class Recursion {
     }
 
     static int fibo(int n){
-        // base condn
+        // base condn..
         if(n<2){
             return n;
         }
