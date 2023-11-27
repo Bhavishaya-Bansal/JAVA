@@ -63,7 +63,7 @@ public class Problems {
         System.out.println(n);
     }
 
-    // factorial of a number
+    // factorial of a number..
     public static int fact(int n){
         if(n<= 1){
             return 1;
