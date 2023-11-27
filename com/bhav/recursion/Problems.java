@@ -82,7 +82,7 @@ public class Problems {
         return ans;
     }
 
-    // finding the sum of digits.. ex: num= 1342.. ans = 1+ 3+ 4+ 2.. that is 10.
+    // finding the sum of digits.. ex: num= 1342.. ans = 1+ 3+ 4+ 2.. that is 10..
     public static int sumDigits(int n){
         if(n == 0){
             return 0;
