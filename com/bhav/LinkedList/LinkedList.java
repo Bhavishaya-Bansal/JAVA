@@ -227,7 +227,7 @@ public class LinkedList {
     }
 
     
-    // Displaying singly Linked list
+    // Displaying singly Linked list..
     public void display(){
         Node temp = head; // creating a temp node so that we can transverse it in our linked list
         while(temp!=null){
