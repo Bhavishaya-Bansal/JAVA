@@ -103,7 +103,7 @@ public class LinkedList {
             temp = temp.next;
         }
 
-        // as temp is at last posn of LL therefore adding next as our newNode
+        // as temp is at last posn of LL therefore adding next as our 'newNode'
         temp.next= newNode;
         size++;
     }
