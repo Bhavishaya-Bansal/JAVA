@@ -74,7 +74,7 @@ public class LinkedList {
         size++;
     }
 
-    //Inserting a node in the end of the Linked List
+    //Inserting a node in the end of the Linked List..
     public void insertLast(int value){
         if(tail==null){
             insertFirst(value);
