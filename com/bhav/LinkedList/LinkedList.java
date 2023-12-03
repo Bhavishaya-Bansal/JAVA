@@ -44,7 +44,7 @@ public class LinkedList {
         return;
     }
 
-    // Inserting value at the starting of Singly Linked List
+    // Inserting value at the starting of Singly Linked List..
     public void insertFirst(int val){
         Node node = new Node(val);
         node.next = head;
@@ -55,7 +55,7 @@ public class LinkedList {
         size++;
     }
 
-    // Instering value at a particular index
+    // Instering value at a particular index..
     public void insert(int val, int index){
         if(index==0){
             insertFirst(val);
