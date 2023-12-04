@@ -30,7 +30,7 @@ public class LinkedList {
 
     // Another method to insert at first posn in the linked list (without using tail pointer)
     public void insertAtFirst(int val) {
-        // Create a new node with the given value
+        // Create a new node with the given value..
         Node newNode = new Node(val);
     
         // If the linked list is empty, set the new node as the head
