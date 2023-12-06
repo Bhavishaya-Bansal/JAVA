@@ -138,7 +138,7 @@ public class LinkedList {
     // **** DELETION.. ****
 
 
-    // Deleting the first element from our singly linked list
+    // Deleting the first element from our singly linked list..
     public int deleteFirst(){
         int val = head.value;
         head = head.next;
