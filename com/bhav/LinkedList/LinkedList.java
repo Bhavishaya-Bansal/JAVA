@@ -184,7 +184,7 @@ public class LinkedList {
         return val;
     }
 
-    // Deleting value from any particular index
+    // Deleting value from any particular index..
     public int delete(int index){
         if(index==0){
             return deleteFirst();
