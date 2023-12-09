@@ -205,7 +205,7 @@ public class LinkedList {
     // **** GET.. FIND.. DISPLAY.. ****
 
 
-    // Get function: to get the value of any particular node at any particular index
+    // Get function: to get the value of any particular node at any particular index..
     public Node get(int index){
         Node node= head;
         for(int i=0; i<index; i++){
