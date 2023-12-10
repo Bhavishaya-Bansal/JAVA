@@ -214,7 +214,7 @@ public class LinkedList {
         return node; // returns refrence pointer to any node
     }
 
-    // Find some particular node with given value
+    // Find some particular node with given value..
     public Node find(int value){
         Node node= head;
         while(node!=null){
