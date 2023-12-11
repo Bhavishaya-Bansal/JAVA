@@ -17,7 +17,7 @@ public class ArrayProblems {
         System.out.println(rotatedBinary(arr, target, 0, arr.length-1));
     }
 
-    // Ques 1: check if an array is sorted or not
+    // Ques 1: check if an array is sorted or not..
     public static boolean sorted(int arr[], int index){
         // base condn
         if(index== arr.length- 1){
