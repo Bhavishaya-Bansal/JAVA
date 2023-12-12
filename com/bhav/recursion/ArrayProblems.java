@@ -27,7 +27,7 @@ public class ArrayProblems {
         return ans;
     }
 
-    // Ques 2: linear search using recursion 
+    // Ques 2: linear search using recursion..
     public static int search(int arr[], int target, int index){
         if(index== arr.length-1 && arr[index] != target){
             return -1;
