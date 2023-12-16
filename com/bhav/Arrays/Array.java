@@ -47,7 +47,7 @@ public class Array {
 // }
 
 // public class Array {
-//     // In this function a new array 'input' is being created therefore our pointer point it to it and the value change will also be done in the new 'input' array created not the one that is passed
+//     // In this function a new array 'input' is being created therefore our pointer point it to it and the value change will also be done in the new 'input' array created not the one that is passed..
     public static void change(int input[]){ 
     input = new int[5]; // new array being created.. therefore points to a new object
     input[0] = 15;
