@@ -33,7 +33,7 @@ package com.bhav.Basics;
 
 import java.util.*;
 
-// Created 
+// Created a seperate 
 public class functions {
     public static void factorial(int n) {
         if (n < 0) {
