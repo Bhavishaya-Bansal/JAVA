@@ -57,5 +57,6 @@ public class Array {
         int arr[] = new int[5];
         change(arr);
         System.out.println("output is "+arr[0]); // hence at last no change is made
+        System.out.println(Arrays.toString(arr));
     }
 }

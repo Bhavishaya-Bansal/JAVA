@@ -7,7 +7,7 @@ public class Main {
         Daughter her= new Daughter(15);
         her.career();
 
-        // Parent mom = new Parent(); // we cannot just an object of an abstract class, we have to overrride it 
+        // Parent mom = new Parent(); // we cannot just create an object of an abstract class, we have to overrride it 
 
         Parent maa= new Parent(55){
             @Override

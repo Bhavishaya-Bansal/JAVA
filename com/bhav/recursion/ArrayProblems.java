@@ -82,6 +82,7 @@ public class ArrayProblems {
         if(arr[start] <= arr[mid]){
             if(target >= arr[start] && target<= arr[mid]){
                 return rotatedBinary(arr, target, start, mid-1);
+                
             }
             else{
                 return rotatedBinary(arr, target, mid+1 , end);
