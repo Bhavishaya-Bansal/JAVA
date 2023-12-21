@@ -2,16 +2,29 @@ package com.bhav.LinkedList;
 
 // Linked list are linear data structure
 public class LinkedList {
-
+    
     private Node head;
     private Node tail;
     
     private int size;
-
+    
     public LinkedList(){
         this.size= 0;
     }
-
+    
+    private class Node{ // In singly linked list a LL has nodes and that particular node has only knowledge about it's own value and the node next to it, that is why we have declared our LL as with value and next( knowledge of next node )
+        private int value;
+        private Node next;
+    
+        public Node(int value){
+            this.value= value;
+        } // constructor when no further node is provided
+    
+        public Node(int value, Node next) {
+            this.value = value;
+            this.next = next;
+        } // constructor when further node is provided
+    }
 
     // **** INSERTION.. ****
 
@@ -225,18 +238,5 @@ public class LinkedList {
     }
 
 
-    private class Node{ // In singly linked list a LL has nodes and that particular node has only knowledge about it's own value and the node next to it, that is why we have declared our LL as with value and next( knowledge of next node )
-        private int value;
-        private Node next;
-
-        public Node(int value){
-            this.value= value;
-        } // constructor when no further node is provided
-
-        public Node(int value, Node next) {
-            this.value = value;
-            this.next = next;
-        } // constructor when further node is provided
-    }
 }
 

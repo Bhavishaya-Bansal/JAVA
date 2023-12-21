@@ -17,7 +17,7 @@ public class StringsInJava {
         String name1= new String("Bhav");
         String name2= new String("Bhav");
 
-        System.out.println(name1 == name2); // here we are comparing the the objects, which as we have created them srperately are now not in string pool and are created seperately
+        System.out.println(name1 == name2); // here we are comparing the the objects, which as we have created them seperately will now not be in string pool and are created seperately
 
         System.out.println(name1.equals(name2)); // whereas here we are only comparing the value(by using .equals ) of both the objects (which is same) 
 
@@ -63,20 +63,30 @@ public class StringsInJava {
         } 
         System.out.println(builder);
 
-        // Here if we will perform this above operation with Strings then we will end up having a lot of extra space Strings to whom no pointer will be pointing and they would end up taking extra space.. Ex: Here extra "a", "ab", "abc" till "abc..y" will be formed.. which will form object which are not pointed by any refrence variable and end up taking extra memory..
+        // Here if we will perform this above operation with 'Strings' then we will end up having a lot of extra space Strings to whom no pointer will be pointing and they would end up taking extra space.. Ex: Here extra "a", "ab", "abc" till "abc..y" will be formed.. which will form object which are not pointed by any refrence variable and end up taking extra memory..
 
         // String METHODS..
 
         String named= "Bhavishaya Bansal";
         
         // toCharArray: convert string to a char array..
+        char named1[]= named.toCharArray();
+        
+        for(int i= 0; i< named1.length; i++){
+            System.out.println(named1[i]);
+        }
+        
+        System.out.println(Arrays.toString(named1));
+
+        // the above is same as the below given line..
         System.out.println(Arrays.toString(named.toCharArray()));
 
         // make the String to lower case
         System.out.println(named.toLowerCase());
 
-        // .strip removes the white space at the end
-        System.out.println("         Bhav    ".strip());
+        // .strip removes the white space at the end and front.. same ways the trim works
+        System.out.println("         Bhav    yb     ".strip());
+        System.out.println("         Bhav    h    ".trim());
 
         // .split will split the string into array everytime a space is found as elements of the array
         System.out.println(Arrays.toString(named.split(" ")));
