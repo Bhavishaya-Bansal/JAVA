@@ -147,7 +147,7 @@ public class BinarySearchTree {
 
     // TREE TRAVERSALS..
 
-    //Pre Order
+    //Pre Order..
     public void preOrder(){
         preOrderPrint(root);
     }
