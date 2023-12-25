@@ -151,7 +151,7 @@ public class BinaryTree {
         preOrderPrint(node.right);
     }
 
-    //In order
+    //In order..
     public void inOrder(){
         inOrderPrint(root);
     }
