@@ -160,7 +160,7 @@ public class BinarySearchTree {
         preOrderPrint(node.right);
     }
 
-    //In order
+    //In order..
     public void inOrder(){
         inOrderPrint(root);
     }
