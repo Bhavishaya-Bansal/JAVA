@@ -104,7 +104,7 @@ public class BinarySearchTree {
         // now while we are getting out of recursion call, as we are adding a new node the height of the node will be changed so.. we have to change the height of each node to be.. max between the left height and the right height of that node and that would be increased by one(as the max of left and right side would give us the height of the child node of the current node at which we are at and plus 1 would be done because we have added a new node in our tree)..
         node.height= Math.max(height(node.left), height(node.right))+ 1;
 
-        // whenever we are getting out of recursion call we will return the nodes that were at the posn earlier and were called in the recursion stack as it is.. we will do so because if we will not do so our tree will change
+        // whenever we are getting out of recursion call we will return the nodes that were at the posn earlier and were called in the recursion stack as it is.. we will do so because if we will not do so our tree will change..
         return node; 
     }
 
