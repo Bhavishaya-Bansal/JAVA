@@ -164,7 +164,7 @@ public class BinaryTree {
         inOrderPrint(node.right);
     }
 
-    // Post Order
+    // Post Order..
     public void postOrder(){
         postOrderPrint(root);
     }
