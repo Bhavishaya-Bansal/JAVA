@@ -129,7 +129,7 @@ public class BinarySearchTree {
 
     // To display our tree..
     public void display(){
-        // calling the recursive function to display our tree
+        // calling the recursive function to display our tree..
         displayTree(root, "Root Node: ");
     }
 
