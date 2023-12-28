@@ -173,7 +173,7 @@ public class BinarySearchTree {
         inOrderPrint(node.right);
     }
 
-    // Post Order
+    // Post Order..
     public void postOrder(){
         postOrderPrint(root);
     }
