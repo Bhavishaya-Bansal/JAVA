@@ -10,6 +10,8 @@ public class InBuiltExamples {
         stack.push(43);
         stack.push(2);
 
+        System.out.println(stack);
+
         System.out.println(stack.pop());
         System.out.println(stack.pop());
         System.out.println(stack.pop());

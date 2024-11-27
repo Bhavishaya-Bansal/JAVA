@@ -1,47 +1,29 @@
-class practise {
+import java.util.ArrayList;
 
-	int getValue() {
+import com.bhav.Searching.linearSearch;
 
-		int returnValue = 10;
+class Practise{
+    public static void main(String args[]){
+        String str= "abc";
+        ArrayList<String> ans= fun("", str);
+        // fun("", str);
+        
+        System.out.println(ans.toString());
+        
+        // char ans= (arr, target);
+    }
+    public static ArrayList<String> fun(String p, String up){
+        ArrayList<String> ans= new ArrayList<>();
+        if(up.length()== 0){
+            ans.add(p);
+        }
+        char ch= up.charAt(0);
 
-		try {
-			String[] Languages = {
+        for(int i = 0; i<= p.length(); i++){
+            ans.addAll(fun(p.substring(0, i)+ ch+ p.substring(i), up.substring(1)));
+        }
+        return ans;
+    }
 
-					"Try block",
-
-					"Try block is running"
-
-			};
-
-			System.out.println(Languages[1]);
-
-		} catch (Exception e) {
-
-			System.out.println("Catch Block :" + returnValue);
-
-			return returnValue;
-
-		} finally {
-
-			returnValue += 10;
-
-			System.out.println("Finally Block :" + returnValue);
-
-		}
-
-		return returnValue;
-
-	}
-
-	public static void main(String args[]) {
-
-		practise
-
-		var = new practise();
-
-		System.out.println("Main Block:" +
-
-				var.getValue());
-
-	}
+    
 }

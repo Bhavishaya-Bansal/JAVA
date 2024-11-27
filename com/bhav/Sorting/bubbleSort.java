@@ -10,7 +10,7 @@ public class bubbleSort {
     }   
 
     static void bubble(int arr[]){
-        boolean swapped; // we used sawapped because even for already sorted array the whole program is running, so for not that to happen we have introduced swapped
+        boolean swapped; // we used swapped because even for already sorted array the whole program is running, so for not that to happen we have introduced swapped
         // run the steps n-1 times
         for(int i =0; i<arr.length; i++){
             swapped = false;

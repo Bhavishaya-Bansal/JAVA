@@ -6,15 +6,24 @@ public class Patterns {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
         int n = 4;
-        // pattern1(n);
-        // pattern2(n);
-        // pattern3(n);
-        // pattern4(n);
-        // pattern5(n);
-        // pattern6(n);
-        // pattern7(n);
-        // pattern8(n);
-        // pattern9(n);
+        pattern1(n);
+        System.out.println();
+        pattern2(n);
+        System.out.println();
+        pattern3(n);
+        System.out.println();
+        pattern4(n);
+        System.out.println();
+        pattern5(n);
+        System.out.println();
+        pattern6(n);
+        System.out.println();
+        pattern7(n);
+        System.out.println();
+        pattern8(n);
+        System.out.println();
+        pattern9(n);
+        System.out.println();
         pattern10(n);
         sc.close();
     }

@@ -13,11 +13,11 @@ public class Main {
 
         list.display();
 
-        list.insertFirst(0);
-        list.insertFirst(1);
-        list.insertFirst(2);
-        list.insertFirst(3);
-        list.insertFirst(4);
+        // list.insertFirst(0);
+        // list.insertFirst(1);
+        // list.insertFirst(2);
+        // list.insertFirst(3);
+        // list.insertFirst(4);
 
         // list.insertLast(99);
 
@@ -39,7 +39,7 @@ public class Main {
         
         // list.display();
 
-        // list.insertRec(4, 70);
+        list.insertRec(2, 70);
 
         list.display();
 

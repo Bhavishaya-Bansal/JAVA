@@ -22,7 +22,7 @@ package com.bhav.Basics;
 //         Scanner sc = new Scanner(System.in);
 //         int i = 0;
 //         while(i<33){
-//             System.out.println("hello semcii");
+//             System.out.println("hello");
 //             i++;
 //         }
 //         sc.close();

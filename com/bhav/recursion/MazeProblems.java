@@ -10,7 +10,7 @@ public class MazeProblems {
 
         // System.out.println(nmbrOfPaths2(1, 0, 1, 3));
 
-        // paths("", 0, 0, 2, 2);
+        paths("", 0, 0, 2, 3);
 
         // ArrayList<String> ans= pathsList("", 0, 0, 2, 2);
         // System.out.println(ans);
@@ -22,15 +22,15 @@ public class MazeProblems {
 
         // System.out.println(pathsDiagonalList("", 0, 0, 2, 2));
 
-        System.out.println(nmbrOfPathsAfterObstacles(0, 0, 3, 3, 2, 2, 0));
+        // System.out.println(nmbrOfPathsAfterObstacles(0, 0, 3, 3, 2, 2, 0));
 
-        System.out.println(nmbrOfPathsAfterObstacles2(0, 0, 3, 3, 2, 2));
+        // System.out.println(nmbrOfPathsAfterObstacles2(0, 0, 3, 3, 2, 2));
 
-        boolean matrix[][]= {
-            {true, true, true},
-            {true, false, true},
-            {true, true, true}
-        };
+        // boolean matrix[][]= {
+        //     {true, true, true},
+        //     {true, false, true},
+        //     {true, true, true}
+        // };
 
         // System.out.println(pathsAfterObstructions3(0, 0, matrix));
 

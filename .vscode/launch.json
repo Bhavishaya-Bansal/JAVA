@@ -9,6 +9,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "QueueMain",
+            "request": "launch",
+            "mainClass": "com.bhav.Queue.QueueMain",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "InBuiltExamples",
+            "request": "launch",
+            "mainClass": "com.bhav.Stacks.InBuiltExamples",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "MazeProblems",
+            "request": "launch",
+            "mainClass": "com.bhav.Recursion.MazeProblems",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "IsArrSorted",
+            "request": "launch",
+            "mainClass": "com.bhav.Striver.Arrays.IsArrSorted",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.bhav.Striver.Arrays.Main",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
+            "name": "Patterns",
+            "request": "launch",
+            "mainClass": "com.bhav.Basics.Patterns",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "practise",
             "request": "launch",
             "mainClass": "practise",
