@@ -6,6 +6,8 @@ public class Practise{
         // int n= sc.nextInt();
         // String name= sc.nextLine();
         float marks= sc.nextFloat();
+        int num= (int)(56.54);
         System.out.println(marks);
+
     }
 }
