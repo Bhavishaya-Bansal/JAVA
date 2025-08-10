@@ -4,7 +4,7 @@ import java.util.*;
 
 // The whole code base working of AVL tree is based on BST just the 'insert' function is changed..
 // AVL is one of a kind of Self Balancing Binary Search Tree.. that uses 4 method of balancing itself..
-public class AVL {
+public class AVL_Trees {
     public class Node{
         private int value;
         private Node left; 
@@ -26,7 +26,7 @@ public class AVL {
     private Node root;
 
     // Constructor..
-    public AVL(){
+    public AVL_Trees(){
 
     }
 

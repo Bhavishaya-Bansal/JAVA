@@ -28,7 +28,7 @@ public class CircularQueue {
         if(isFull()){
             return false;
         }
-        // internally our circular queue is a lsit only.. suppose our end is at the last element(data.length) so if we direcly increase our end index it will give us index out of bound.. therefore to move our end to the correct index(here which would be 0) we can get the remainder of end and length of the list, which will give us the correct index
+        // internally our circular queue is a list only.. suppose our end is at the last element(data.length) so if we direcly increase our end index it will give us index out of bound.. therefore to move our end to the correct index(here which would be 0) we can get the remainder of end and length of the list, which will give us the correct index
         data[end]= item;
         end++;
         end = end % data.length;

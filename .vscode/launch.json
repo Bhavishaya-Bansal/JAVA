@@ -9,6 +9,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "InBuiltExamples",
+            "request": "launch",
+            "mainClass": "com.bhav.Queue.InBuiltExamples",
+            "projectName": "JAVA_169d93c0"
+        },
+        {
+            "type": "java",
             "name": "QueueMain",
             "request": "launch",
             "mainClass": "com.bhav.Queue.QueueMain",

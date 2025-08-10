@@ -53,7 +53,7 @@ public class Main {
         // bst.postOrder();
 
 
-        AVL avlTree= new AVL();
+        // AVL_Trees avlTree= new AVL_Trees();
 
         // Inserting ascending order values.. These values in our BST would be one sided(just like a linked list)
         // for(int i=1; i<10; i++){
@@ -67,7 +67,7 @@ public class Main {
         SegmentTrees segTree= new SegmentTrees(arr);
 
         segTree.display();
-        // System.out.println(segTree.query(1, 6));
+        System.out.println(segTree.query(1, 6));
          
     }
 }
